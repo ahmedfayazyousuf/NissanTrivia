@@ -7,6 +7,7 @@ import nismob from "./nismob.png";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
+import firebase from '../../firbase';
 
 const Registration = () => {
     // const {state} = useLocation();
@@ -23,126 +24,149 @@ const Registration = () => {
 
     let firstname, value, gender;
 
-    const handleInputs = (e) => {
-        console.log(e);
-        firstname = e.target.name;
-        value = e.target.value;
+    // const handleInputs = (e) => {
+    //     console.log(e);
+    //     firstname = e.target.name;
+    //     value = e.target.value;
 
-        setUser({...user, [firstname]:value})
-    }
+    //     setUser({...user, [firstname]:value})
+    // }
 
-    function onSubmit(){
-        history("/Registration2",{state:{user:user,id:user_id}})
-    }
+    // function onSubmit(){
+    //     history("/Registration2",{state:{user:user,id:user_id}})
+    // }
 
-    async function getData(){
+    // async function getData(){
 
-        try {
-            var status = "Accepted"
-            axios.put("https://rsvpadminserver.azurewebsites.net/user_update", {
-               user_id,
-               status
-           })
-       } catch (error) {
-           console.log(error);
-       }
+    //     try {
+    //         var status = "Accepted"
+    //         axios.put("https://rsvpadminserver.azurewebsites.net/user_update", {
+    //            user_id,
+    //            status
+    //        })
+    //    } catch (error) {
+    //        console.log(error);
+    //    }
 
 
-        try {
-            const res = await fetch(`https://rsvpadminserver.azurewebsites.net/user_one/${user_id}`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
+    //     try {
+    //         const res = await fetch(`https://rsvpadminserver.azurewebsites.net/user_one/${user_id}`, {
+    //         method: "GET",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         }
+    //     })
     
-        const data = await res.json();
+    //     const data = await res.json();
     
-        console.log(data[0].Name)
-        setName(data[0].Name);
+    //     console.log(data[0].Name)
+    //     setName(data[0].Name);
     
-       } catch (error) {       
-           console.log(error);
-       }
-    }
+    //    } catch (error) {       
+    //        console.log(error);
+    //    }
+    // }
 
-    useEffect(() =>{
-        document.getElementById('navigator').style.opacity = 0;
-        document.getElementById('navigator').style.display = 'none';
+    // useEffect(() =>{
+    //     document.getElementById('navigator').style.opacity = 0;
+    //     document.getElementById('navigator').style.display = 'none';
 
         
-        getData();
+    //     getData();
 
-        if(window.innerWidth <= 600){
-            document.getElementById('head').setAttribute("src",nismob)
-        }
-        // eslint-disable-next-line
-    },[])
+    //     if(window.innerWidth <= 600){
+    //         document.getElementById('head').setAttribute("src",nismob)
+    //     }
+    //     // eslint-disable-next-line
+    // },[])
 
-    function onlyOne(e) {
-        var checkm = document.getElementById('checkm');
-        var checkf = document.getElementById('checkf');
-        // checkm.checked = !checkm.checked 
-        // checkf.checked = !checkf.checked 
-        // console.log(checkbox)
+    // function onlyOne(e) {
+    //     var checkm = document.getElementById('checkm');
+    //     var checkf = document.getElementById('checkf');
+    //     // checkm.checked = !checkm.checked 
+    //     // checkf.checked = !checkf.checked 
+    //     // console.log(checkbox)
 
-        if(e === 'm'){
-            console.log("lol")
+    //     if(e === 'm'){
+    //         console.log("lol")
             
-            checkf.checked = false
+    //         checkf.checked = false
             
-            gender = "gender";
-            value = "Male";
-            setUser({...user, [gender]:value})
-        }
+    //         gender = "gender";
+    //         value = "Male";
+    //         setUser({...user, [gender]:value})
+    //     }
 
-        if(e === 'f'){
-            console.log("lil")
+    //     if(e === 'f'){
+    //         console.log("lil")
             
-            checkm.checked = false
-            firstname = "gender";
-            value = "Female";
-            setUser({...user, [gender]:value})
-        }
+    //         checkm.checked = false
+    //         firstname = "gender";
+    //         value = "Female";
+    //         setUser({...user, [gender]:value})
+    //     }
 
 
 
-    }
+    // }
 
-    function onlyOnetwo(e) {
-        var checkm = document.getElementById('checkmd');
-        var checkf = document.getElementById('checkfd');
-        // checkm.checked = !checkm.checked 
-        // checkf.checked = !checkf.checked 
-        // console.log(checkbox)
+    // function onlyOnetwo(e) {
+    //     var checkm = document.getElementById('checkmd');
+    //     var checkf = document.getElementById('checkfd');
+    //     // checkm.checked = !checkm.checked 
+    //     // checkf.checked = !checkf.checked 
+    //     // console.log(checkbox)
 
-        if(e === 'm'){
-            console.log("lol")
+    //     if(e === 'm'){
+    //         console.log("lol")
             
-            checkf.checked = false
+    //         checkf.checked = false
             
-            firstname = "gender";
-            value = "Male";
-            setUser({...user, [firstname]:value})
-        }
+    //         firstname = "gender";
+    //         value = "Male";
+    //         setUser({...user, [firstname]:value})
+    //     }
 
-        if(e === 'f'){
-            console.log("lil")
+    //     if(e === 'f'){
+    //         console.log("lil")
             
-            checkm.checked = false
-            firstname = "gender";
-            value = "Female";
-            setUser({...user, [firstname]:value})
-        }
+    //         checkm.checked = false
+    //         firstname = "gender";
+    //         value = "Female";
+    //         setUser({...user, [firstname]:value})
+    //     }
 
 
 
+    // }
+    const navigate = useNavigate();
+
+    function CheckData(){
+        const Email = document.getElementById("email").value;
+        const Users = firebase.firestore().collection("Users");
+
+        Users.where("Email", "==", Email).get().then((doc)=>{
+            
+            if(doc.empty){
+                console.log("ayo u aint in here");
+                return;
+            }
+
+            doc.forEach((doc)=>{
+                
+                console.log("ayo u in here ma boi");
+                navigate("/entercode",{state:{uid:doc.id}});
+    
+            })
+
+            
+        })
     }
 
     return (
         <div style={{justifyContent:"center", alignItems:"center", width:"100%", height:"100%"}}>
         
-        <div style={{display: 'flex', width: '100%'}}>
+        {/* <div style={{display: 'flex', width: '100%'}}>
             <img id='head' style={{height:'100%', marginBottom:"5px"}} src={nislap} alt="Nissan Laptop Cover"/>
         </div>
 
@@ -282,7 +306,15 @@ const Registration = () => {
             <button className="confirmer" onClick = {onSubmit} style={{width: '120px'}}>
                 Confirm
             </button>
-        </div>
+        </div> */}
+
+        <label>Enter Name:</label>
+        <input id='name' type="text" />
+
+        <label>Enter Email</label>
+        <input id='email' type="text" />
+
+        <button onClick={CheckData}>Login</button>
         </div>
     )
 }

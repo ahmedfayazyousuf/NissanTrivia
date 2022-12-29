@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/QR" element={<QR />} />
           <Route path="/EnterCode" element={<EnterCode />} />
           <Route path="/Success/:user_id" element={<Success />} />
-          <Route path="/Login/:user_id" element={<Login />} />
+          <Route path="/Login" element={<Login />} />
 
           <Route path="/Instructions" element={<Instructions />} />
           <Route path="/Q1" element={<Q1 />} />
