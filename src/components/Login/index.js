@@ -173,14 +173,19 @@ const Registration = () => {
                 console.log(current.getMinutes())
 
                 if(parseInt(timesloth) === current.getHours()){
-                    console.log("true")
+                    alert("true")
                 }
                 else{
                     if(current.getMinutes()>=30){
                         console.log("firsttrue")
                         if(current.getHours() === (timesloth-1)){
-                            console.log("secondtrue")
+                            alert("secondtrue")
                         }
+                        else{
+                            alert("error")
+                        }
+                    }else{
+                        alert("error")
                     }
                 }
 
