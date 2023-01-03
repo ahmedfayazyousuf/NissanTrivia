@@ -153,9 +153,39 @@ const Registration = () => {
             }
 
             doc.forEach((doc)=>{
+
+                var data = doc.data();
+                console.log(data)
+                var timeslot = data.Timeslot;
+                var timeslot2 = data.Timeslot2;
+                var timesloth = timeslot.slice(8,10)
+                var timeslot2h = timeslot2.slice(8,10)
+
                 
+                console.log();
+
+                console.log(timeslot2.slice(8,10));
+
+                var current = new Date();
+
+                console.log(current.getHours())
+
+                console.log(current.getMinutes())
+
+                if(parseInt(timesloth) === current.getHours()){
+                    console.log("true")
+                }
+                else{
+                    if(current.getMinutes()>=30){
+                        console.log("firsttrue")
+                        if(current.getHours() === (timesloth-1)){
+                            console.log("secondtrue")
+                        }
+                    }
+                }
+
                 console.log("ayo u in here ma boi");
-                navigate("/entercode",{state:{uid:doc.id}});
+                // navigate("/entercode",{state:{uid:doc.id}});
     
             })
 
