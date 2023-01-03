@@ -4,15 +4,18 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
-    /* background-image: url("darkbg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: 0.6; */
     overflow-y: hidden;
     color: black;
 }
 body, html{
     height: 100%
+}
+body {
+  background-image: url("wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: 0.6;
+
 }
 
 
