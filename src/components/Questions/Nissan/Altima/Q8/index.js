@@ -1,9 +1,7 @@
-// import NissanLogo from '../Z_Images/nissanlogo.png'
-// import GetReady from '../Z_Images/getreadytoexplorewhite.png'
 import '../../../../Z_Styles/Nissan.css'
 
 
-const AltimaQ8 = () => {
+const InfinitiGenericQ6 = () => {
 
         function Handleclick(e){
             if(e === 'option1'){
@@ -84,4 +82,4 @@ const AltimaQ8 = () => {
     )
 }
 
-export default AltimaQ8
+export default InfinitiGenericQ6
