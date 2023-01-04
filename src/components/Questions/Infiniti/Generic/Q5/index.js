@@ -53,19 +53,19 @@ const GenericQ5 = () => {
 
         function handleSubmit(){
             if(location.state.count === 3){
-                if (location.state.car === 'QX55' || location.state.car === 'QX60' || location.state.car === 'QX80'){
-                    var no = Math.floor(Math.random() * ((4-0) - 0 + 1)) + 0;
-                    var qn = [1,2,3,4,5];
+               
+                var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                var qn = [1,2,3,4];
 
-                    if (no !== -1) {
-                        qn.splice(no, 1);
+                if (no !== -1) {
+                    qn.splice(no, 1);
 
-                        console.log(no)
-                        console.log(qn)
+                    console.log(no)
+                    console.log(qn)
 
-                        navigate(`${location.state.car}Q${no+1}`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
-                    }        
-                }
+                    navigate(`/${location.state.car}Q${no+1}`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                }        
+                
             }
 
             else{

@@ -3,7 +3,7 @@
 import '../../../../Z_Styles/Nissan.css'
 
 
-const InfinitiGenericQ1 = () => {
+const XTrailQ1 = () => {
 
         function Handleclick(e){
             if(e === 'option1'){
@@ -84,4 +84,4 @@ const InfinitiGenericQ1 = () => {
     )
 }
 
-export default InfinitiGenericQ1
+export default XTrailQ1

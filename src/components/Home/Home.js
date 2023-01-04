@@ -23,7 +23,61 @@ const Home = () => {
 
         CarUsers.add({Email:Email, Code:Loc});
 
-        if (Loc === 'DXB-R18026'){
+        if (Loc === '1'){
+
+            var qn = [1,2,3,4,5,6];
+
+            var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+
+            if (no !== -1) {
+                qn.splice(no, 1);
+
+                console.log(no);
+
+                console.log(qn);
+
+                
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Q50"}})
+            }
+        }
+
+        if (Loc === '2'){
+
+            var qn = [1,2,3,4,5,6];
+
+            var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+
+            if (no !== -1) {
+                qn.splice(no, 1);
+
+                console.log(no);
+
+                console.log(qn);
+
+                
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Q60"}})
+            }
+        }
+
+        if (Loc === '3'){
+
+            var qn = [1,2,3,4,5,6];
+
+            var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+
+            if (no !== -1) {
+                qn.splice(no, 1);
+
+                console.log(no);
+
+                console.log(qn);
+
+                
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX50"}})
+            }
+        }
+
+        if (Loc === '4'){
 
             var qn = [1,2,3,4,5,6];
 
@@ -38,6 +92,42 @@ const Home = () => {
 
                 
                 navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX55"}})
+            }
+        }
+
+        if (Loc === '5'){
+
+            var qn = [1,2,3,4,5,6];
+
+            var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+
+            if (no !== -1) {
+                qn.splice(no, 1);
+
+                console.log(no);
+
+                console.log(qn);
+
+                
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX60"}})
+            }
+        }
+
+        if (Loc === '6'){
+
+            var qn = [1,2,3,4,5,6];
+
+            var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+
+            if (no !== -1) {
+                qn.splice(no, 1);
+
+                console.log(no);
+
+                console.log(qn);
+
+                
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX80"}})
             }
         }
 
