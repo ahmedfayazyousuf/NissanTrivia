@@ -17,6 +17,11 @@ import InfinitiGenericQ4 from './components/Questions/Infiniti/Generic/Q4';
 import InfinitiGenericQ5 from './components/Questions/Infiniti/Generic/Q5';
 import InfinitiGenericQ6 from './components/Questions/Infiniti/Generic/Q6';
 
+import Q50Q1 from './components/Questions/Infiniti/Generic/Q1';
+import Q50Q2 from './components/Questions/Infiniti/Generic/Q2';
+import Q50Q3 from './components/Questions/Infiniti/Generic/Q3';
+import Q50Q4 from './components/Questions/Infiniti/Generic/Q4';
+
 
 
 
@@ -36,6 +41,10 @@ const App = () => {
           <Route path="/InfinitiGenericQ5" element={<InfinitiGenericQ5 />} />
           <Route path="/InfinitiGenericQ6" element={<InfinitiGenericQ6 />} />
 
+          <Route path="/Q50Q1" element={<Q50Q1 />} />
+          <Route path="/Q50Q1" element={<Q50Q2 />} />
+          <Route path="/Q50Q1" element={<Q50Q3 />} />
+          <Route path="/Q50Q1" element={<Q50Q4 />} />
 
           <Route path="*" element={<Error />} />
       </Routes>
