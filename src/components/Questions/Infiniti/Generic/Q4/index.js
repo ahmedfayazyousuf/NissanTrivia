@@ -1,9 +1,7 @@
-// import NissanLogo from '../Z_Images/nissanlogo.png'
-// import GetReady from '../Z_Images/getreadytoexplorewhite.png'
 import '../../../../Z_Styles/Nissan.css'
 
 
-const InfinitiGenericQ1 = () => {
+const GenericQ4 = () => {
 
         function Handleclick(e){
             if(e === 'option1'){
@@ -84,4 +82,4 @@ const InfinitiGenericQ1 = () => {
     )
 }
 
-export default InfinitiGenericQ1
+export default GenericQ4
