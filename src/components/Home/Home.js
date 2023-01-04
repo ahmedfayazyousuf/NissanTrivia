@@ -5,9 +5,12 @@ import GetReady from '../Z_Images/getreadytoexplorewhite.png'
 import '../Z_Styles/Nissan.css'
 import firebase from '../../firbase';
 import {useRef} from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const Home = () => { 
 
     const buttonRef = useRef(null);
+    const navigate = useNavigate();
 
     function CheckData(){
         buttonRef.current.disabled = true;
@@ -15,9 +18,30 @@ const Home = () => {
         const Loc = document.getElementById("loccode").value;
         const Users = firebase.firestore().collection("Users");
         const CarUsers = firebase.firestore().collection("CarUsers");
+
         
 
         CarUsers.add({Email:Email, Code:Loc});
+
+        if (Loc === 'DXB-R18026'){
+
+            var qn = [1,2,3,4,5,6];
+
+            var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+
+            if (no !== -1) {
+                qn.splice(no, 1);
+
+                console.log(no);
+
+                console.log(qn);
+
+                
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX55"}})
+            }
+        }
+
+
         // Users.where("Email", "==", Email).get().then((doc)=>{
             
         //     if(doc.empty){

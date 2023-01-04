@@ -1,8 +1,9 @@
 import '../../../../Z_Styles/Nissan.css'
-
-
+import {useLocation} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const GenericQ4 = () => {
-
+    const location = useLocation();
+    const navigate = useNavigate();
         function Handleclick(e){
             if(e === 'option1'){
                 document.getElementById(e).style.background = "black";
@@ -48,6 +49,37 @@ const GenericQ4 = () => {
                 document.getElementById('option3').style.color = "black";
             }
         }
+
+        function handleSubmit(){
+            if(location.state.count === 3){
+                if (location.state.car === 'QX55' || location.state.car === 'QX60' || location.state.car === 'QX80'){
+                    var no = Math.floor(Math.random() * ((4-0) - 0 + 1)) + 0;
+                    var qn = [1,2,3,4,5];
+
+                    if (no !== -1) {
+                        qn.splice(no, 1);
+
+                        console.log(no)
+                        console.log(qn)
+
+                        navigate(`${location.state.car}Q${no+1}`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                    }        
+                }
+            }
+
+            else{
+                var no = Math.floor(Math.random() * (((5- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
+
+                console.log(no)
+                console.log(qn)
+
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:location.state.count + 1,qns:qn,score:0,car:location.state.car}})
+            }
+        }
     
     return(
         <div style={{backgroundColor: 'white', height: '100vh', width: '100vw', overflowY: 'hidden'}}>
@@ -70,7 +102,7 @@ const GenericQ4 = () => {
                     <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Option 4</button>
                 </div>
 
-                <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}}>NEXT</button>
+                <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
 
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                     <img src="https://firebasestorage.googleapis.com/v0/b/assetuploadformbuilder.appspot.com/o/images%2Fgetreadyexplore.png?alt=media&token=bedd3483-ca06-414d-940e-9185a0b808a1" alt="Logo" style={{width: '20vh', marginTop: '30px', marginBottom: '10px'}}/>
