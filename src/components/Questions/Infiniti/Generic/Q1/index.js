@@ -6,9 +6,10 @@ import {useLocation} from 'react-router-dom';
 const InfinitiGenericQ1 = () => {
         const location = useLocation();
         const navigate = useNavigate();
+        const [bool, setBool] = useState(false); 
         function Handleclick(e){
 
-            const [bool, setBool] = useState(false); 
+            
 
             if(e === 'option1'){
                 document.getElementById(e).style.background = "black";
@@ -60,7 +61,9 @@ const InfinitiGenericQ1 = () => {
         }
 
         function handleSubmit(){
-            if(location.state.count === 3){
+
+            if(bool === false){
+                if(location.state.count === 3){
 
                     var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
                     var qn = [1,2,3,4];
@@ -71,7 +74,7 @@ const InfinitiGenericQ1 = () => {
                         console.log(no)
                         console.log(qn)
 
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
                     }        
                 
             }
@@ -87,8 +90,44 @@ const InfinitiGenericQ1 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:0,car:location.state.car}})
+                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
             }
+            }
+
+            else{
+
+                if(location.state.count === 3){
+
+                    var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                    var qn = [1,2,3,4];
+                    var n = qn[no]
+                    if (no !== -1) {
+                        qn.splice(no, 1);
+
+                        console.log(no)
+                        console.log(qn)
+
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                    }        
+                
+            }
+
+            else{
+                var no = Math.floor(Math.random() * (((5- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                var n = qn[no]
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
+
+                console.log(no)
+                console.log(qn)
+
+                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+            }
+
+            }
+            
         }
     
     return(
