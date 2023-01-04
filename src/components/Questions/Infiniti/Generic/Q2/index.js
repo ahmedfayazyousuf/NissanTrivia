@@ -57,14 +57,14 @@ const InfinitiGenericQ2 = () => {
                 
                 var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
                 var qn = [1,2,3,4];
-
+                var n = qn[no]
                 if (no !== -1) {
                     qn.splice(no, 1);
 
                     console.log(no)
                     console.log(qn)
 
-                    navigate(`/${location.state.car}Q${no+1}`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                    navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
                 }        
                 
             }
@@ -72,6 +72,7 @@ const InfinitiGenericQ2 = () => {
             else{
                 var no = Math.floor(Math.random() * (((5- location.state.count)-0) - 0 + 1)) + 0;
                 var qn = location.state.qns;
+                var n = qn[no]
                 if (no !== -1) {
                     qn.splice(no, 1);
                 }
@@ -79,7 +80,7 @@ const InfinitiGenericQ2 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:location.state.count + 1,qns:qn,score:0,car:location.state.car}})
+                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:0,car:location.state.car}})
             }
         }
     
