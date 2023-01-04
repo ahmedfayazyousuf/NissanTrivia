@@ -73,6 +73,7 @@ const Q50Q2 = () => {
             else{
                 var no = Math.floor(Math.random() * (((3- location.state.count)-0) - 0 + 1)) + 0;
                 var qn = location.state.qns;
+                var n = qn[no]
                 if (no !== -1) {
                     qn.splice(no, 1);
                 }
@@ -80,7 +81,7 @@ const Q50Q2 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/Q50Q${no+1}`,{state:{count:location.state.count + 1,qns:qn,score:0,car:location.state.car}})
+                navigate(`/Q50Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:0,car:location.state.car}})
             }
         }
     
