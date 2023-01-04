@@ -85,16 +85,16 @@ import KicksQ8 from './components/Questions/Nissan/Kicks/Q8';
 import KicksQ9 from './components/Questions/Nissan/Kicks/Q9';
 import KicksQ10 from './components/Questions/Nissan/Kicks/Q10';
 
-import NissanZQ1 from './components/Questions/Nissan/Nissan Z/Q1';
-import NissanZQ2 from './components/Questions/Nissan/Nissan Z/Q2';
-import NissanZQ3 from './components/Questions/Nissan/Nissan Z/Q3';
-import NissanZQ4 from './components/Questions/Nissan/Nissan Z/Q4';
-import NissanZQ5 from './components/Questions/Nissan/Nissan Z/Q5';
-import NissanZQ6 from './components/Questions/Nissan/Nissan Z/Q6';
-import NissanZQ7 from './components/Questions/Nissan/Nissan Z/Q7';
-import NissanZQ8 from './components/Questions/Nissan/Nissan Z/Q8';
-import NissanZQ9 from './components/Questions/Nissan/Nissan Z/Q9';
-import NissanZQ10 from './components/Questions/Nissan/Nissan Z/Q10';
+import NissanZQ1 from './components/Questions/Nissan/NissanZ/Q1';
+import NissanZQ2 from './components/Questions/Nissan/NissanZ/Q2';
+import NissanZQ3 from './components/Questions/Nissan/NissanZ/Q3';
+import NissanZQ4 from './components/Questions/Nissan/NissanZ/Q4';
+import NissanZQ5 from './components/Questions/Nissan/NissanZ/Q5';
+import NissanZQ6 from './components/Questions/Nissan/NissanZ/Q6';
+import NissanZQ7 from './components/Questions/Nissan/NissanZ/Q7';
+import NissanZQ8 from './components/Questions/Nissan/NissanZ/Q8';
+import NissanZQ9 from './components/Questions/Nissan/NissanZ/Q9';
+import NissanZQ10 from './components/Questions/Nissan/NissanZ/Q10';
 
 import PathfinderQ1 from './components/Questions/Nissan/Pathfinder/Q1';
 import PathfinderQ2 from './components/Questions/Nissan/Pathfinder/Q2';
