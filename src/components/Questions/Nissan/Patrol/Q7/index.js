@@ -56,7 +56,7 @@ const InfinitiGenericQ6 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', padding: '0'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}} >Question Text?</p>
+                <p style={{fontSize: '15px', marginTop: '10px'}} >Question Text??</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
