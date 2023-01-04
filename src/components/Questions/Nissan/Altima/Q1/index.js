@@ -3,7 +3,7 @@
 import '../../../../Z_Styles/Nissan.css'
 
 
-const TimeSlot = () => {
+const AltimaQ1 = () => {
 
         function Handleclick(e){
             if(e === 'option1'){
@@ -84,4 +84,4 @@ const TimeSlot = () => {
     )
 }
 
-export default TimeSlot
+export default AltimaQ1
