@@ -1,9 +1,10 @@
-// import NissanLogo from '../Z_Images/nissanlogo.png'
-// import GetReady from '../Z_Images/getreadytoexplorewhite.png'
+import React from "react";
+import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import {useLocation} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 const InfinitiGenericQ2 = () => {
+    const [bool, setBool] = useState(false); 
     const location = useLocation();
     const navigate = useNavigate();
         function Handleclick(e){
@@ -16,6 +17,7 @@ const InfinitiGenericQ2 = () => {
                 document.getElementById('option3').style.color = "black";
                 document.getElementById('option4').style.background = "transparent";
                 document.getElementById('option4').style.color = "black";
+                setBool(false);
             }
 
             if(e === 'option2'){
@@ -27,6 +29,7 @@ const InfinitiGenericQ2 = () => {
                 document.getElementById('option3').style.background = "transparent";
                 document.getElementById('option4').style.background = "transparent";
                 document.getElementById('option4').style.color = "black";
+                setBool(true);
             }
 
             if(e === 'option3'){
@@ -38,6 +41,7 @@ const InfinitiGenericQ2 = () => {
                 document.getElementById('option2').style.color = "black";
                 document.getElementById('option4').style.background = "transparent";
                 document.getElementById('option4').style.color = "black";
+                setBool(false);
             }
 
             if(e === 'option4'){
@@ -49,6 +53,7 @@ const InfinitiGenericQ2 = () => {
                 document.getElementById('option2').style.color = "black";
                 document.getElementById('option3').style.background = "transparent";
                 document.getElementById('option3').style.color = "black";
+                setBool(false);
             }
         }
 
@@ -90,18 +95,18 @@ const InfinitiGenericQ2 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', padding: '0'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}} >Question Text?</p>
+                <p style={{fontSize: '15px', marginTop: '10px'}} >In which year did INFINITI officially launch?</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Option 1</button>
-                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Option 2</button>
+                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>1981</button>
+                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>1989</button>
                 </div>
 
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}}>
-                    <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Option 3</button>
-                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Option 4</button>
+                    <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>1990</button>
+                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>1993</button>
                 </div>
 
                 <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
@@ -109,8 +114,6 @@ const InfinitiGenericQ2 = () => {
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                     <img src="https://firebasestorage.googleapis.com/v0/b/assetuploadformbuilder.appspot.com/o/images%2Fgetreadyexplore.png?alt=media&token=bedd3483-ca06-414d-940e-9185a0b808a1" alt="Logo" style={{width: '20vh', marginTop: '30px', marginBottom: '10px'}}/>
                 </div>
-
-
             </div>
         </div>
     )

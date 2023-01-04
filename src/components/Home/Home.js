@@ -198,9 +198,9 @@ const Home = () => {
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '350px', gap:'10px', alignItems: 'center'}}>
-                        <input type="email" id='email' placeholder='ENTER YOUR EMAIL' style={{width:"220px", height: '25px', textAlign: 'center', fontSize: '8px'}} />
-                        <input type="loccode" id="loccode" placeholder='ENTER LOCATION CODE' style={{width:"220px", height: '25px', textAlign: 'center', fontSize: '8px'}} /> 
-                    <button ref={buttonRef} className="grab" style={{width:"200px", height: '35px', marginTop: '20px', margin: '10px', borderRadius: '10px', backgroundColor: 'white'}} onClick={CheckData}>LET'S PLAY</button>
+                        <input type="email" id='email' placeholder='ENTER YOUR EMAIL' style={{width:"240px", height: '30px', textAlign: 'center', fontSize: '10px'}} />
+                        <input type="loccode" id="loccode" placeholder='ENTER LOCATION CODE' style={{width:"240px", height: '30px', textAlign: 'center', fontSize: '10px'}} /> 
+                        <button ref={buttonRef} className="grab" style={{width:"200px", height: '35px', marginTop: '20px', margin: '10px', borderRadius: '10px', backgroundColor: 'white'}} onClick={CheckData}>LET'S PLAY</button>
                 </div>
 
                 <div className="form-check" id="checkthreewrap" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: '20px'}}>

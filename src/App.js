@@ -4,8 +4,8 @@ import "./App.css";
 import 'bootstrap';
 
 import Home from "./components/Home/Home";
-import Success from "./components/Success/index";
 import Instructions from './components/Instructions';
+import Score from './components/Score';
 import Error from './components/Error/Error';
 
 
@@ -134,8 +134,8 @@ const App = () => {
     <>
       <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/Success/:user_id" element={<Success />} />
           <Route path="/Instructions" element={<Instructions />} />
+          <Route path="/Score" element={<Score />} />
           <Route path="*" element={<Error />} />
           
           {/* INFINITI */}

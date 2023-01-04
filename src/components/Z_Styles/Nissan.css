@@ -23,7 +23,7 @@ body {
     font-family: myFont;
     src:url(NissanBrand-Bold.ttf);
 }
-h1,h2,h3,h4,h5,h6,a,button,div, tr, td, table, th{
+h1,h2,h3,h4,h5,h6,a,button,div, tr, td, table, th, .sss{
     font-family: myFont;
 }
 
