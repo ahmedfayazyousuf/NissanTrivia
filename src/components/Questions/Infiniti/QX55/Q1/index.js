@@ -58,6 +58,7 @@ const QX55Q1 = () => {
             setBool(true);
         }
     }
+    
     function handleSubmit(){
         if(bool === false){
             if(location.state.count === 2){
