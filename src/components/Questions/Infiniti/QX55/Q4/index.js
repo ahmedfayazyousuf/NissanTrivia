@@ -1,9 +1,15 @@
-import React from "react";
-import { useState } from "react"
-const QX55Q4 = () => {
 
+import '../../../../Z_Styles/Nissan.css'
+import { useNavigate } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
+import { useState } from "react"
+
+const QX55Q4 = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
     const [bool, setBool] = useState(false); 
 
+    
     function Handleclick(e){
         if(e === 'option1'){
             document.getElementById(e).style.background = "black";
@@ -54,15 +60,78 @@ const QX55Q4 = () => {
         }
     }
 
-    function handleSubmit(){
-        if(bool === false){
 
+        function handleSubmit(){
+            if(bool === false){
+                if(location.state.count === 2){
+    
+                    // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                    // var qn = [1,2,3,4];
+    
+                    // if (no !== -1) {
+                    //     qn.splice(no, 1);
+    
+                    //     console.log(no)
+                    //     console.log(qn)
+    
+                    //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                    // }    
+                    
+                    navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id}})
+                
+            }
+    
+                else{
+                    var no = Math.floor(Math.random() * (((3- location.state.count)-0) - 0 + 1)) + 0;
+                    var qn = location.state.qns;
+                    var n = qn[no]
+                    if (no !== -1) {
+                        qn.splice(no, 1);
+                    }
+    
+                    console.log(no)
+                    console.log(qn)
+    
+                    navigate(`/QX55Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+                }
+            }
+    
+            else{
+                if(location.state.count === 2){
+    
+                    // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                    // var qn = [1,2,3,4];
+    
+                    // if (no !== -1) {
+                    //     qn.splice(no, 1);
+    
+                    //     console.log(no)
+                    //     console.log(qn)
+    
+                    //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                    // }    
+                    
+                    navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                
+            }
+    
+                else{
+                    var no = Math.floor(Math.random() * (((3- location.state.count)-0) - 0 + 1)) + 0;
+                    var qn = location.state.qns;
+                    var n = qn[no]
+                    if (no !== -1) {
+                        qn.splice(no, 1);
+                    }
+    
+                    console.log(no)
+                    console.log(qn)
+    
+                    navigate(`/QX55Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                }
+    
+            }
         }
-
-        else{
-
-        }
-    }
+    
 
         return(
             <div style={{backgroundColor: 'white', height: '100vh', width: '100vw', overflowY: 'hidden'}}>
@@ -81,8 +150,8 @@ const QX55Q4 = () => {
                     <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Within the right tail light</button>
                     <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Within the rear bumper</button>
                 </div>
-
-                <button className="grab" style={{width:"220px", borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', marginTop: '15px'}}>NEXT</button>
+                
+                <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
 
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                     <img src="https://firebasestorage.googleapis.com/v0/b/assetuploadformbuilder.appspot.com/o/images%2Fgetreadyexplore.png?alt=media&token=bedd3483-ca06-414d-940e-9185a0b808a1" alt="Logo" style={{width: '20vh', marginTop: '30px', marginBottom: '10px'}}/>

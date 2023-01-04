@@ -1,32 +1,38 @@
-import React from "react";
+// import GetReady from '../Z_Images/getreadytoexplorewhite.png'
+import '../../../../Z_Styles/Nissan.css'
+import { useNavigate } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import { useState } from "react"
 
 const QX55Q1 = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
     const [bool, setBool] = useState(false); 
-    function Handleclick(e){
-        if(e === 'option1'){
-            document.getElementById(e).style.background = "black";
-            document.getElementById(e).style.color = "white";
-            document.getElementById('option2').style.background = "transparent";
-            document.getElementById('option2').style.color = "black";
-            document.getElementById('option3').style.background = "transparent";
-            document.getElementById('option3').style.color = "black";
-            document.getElementById('option4').style.background = "transparent";
-            document.getElementById('option4').style.color = "black";
-            setBool(false);
-        }
-
-        if(e === 'option2'){
-            document.getElementById(e).style.background = "black";
-            document.getElementById(e).style.color = "white";
-            document.getElementById('option1').style.background = "transparent";
-            document.getElementById('option1').style.color = "black";
-            document.getElementById('option3').style.color = "black";
-            document.getElementById('option3').style.background = "transparent";
-            document.getElementById('option4').style.background = "transparent";
-            document.getElementById('option4').style.color = "black";
-            setBool(false);
-        }
+    
+        function Handleclick(e){
+            if(e === 'option1'){
+                document.getElementById(e).style.background = "black";
+                document.getElementById(e).style.color = "white";
+                document.getElementById('option2').style.background = "transparent";
+                document.getElementById('option2').style.color = "black";
+                document.getElementById('option3').style.background = "transparent";
+                document.getElementById('option3').style.color = "black";
+                document.getElementById('option4').style.background = "transparent";
+                document.getElementById('option4').style.color = "black";
+                setBool(false);
+            }
+    
+            if(e === 'option2'){
+                document.getElementById(e).style.background = "black";
+                document.getElementById(e).style.color = "white";
+                document.getElementById('option1').style.background = "transparent";
+                document.getElementById('option1').style.color = "black";
+                document.getElementById('option3').style.color = "black";
+                document.getElementById('option3').style.background = "transparent";
+                document.getElementById('option4').style.background = "transparent";
+                document.getElementById('option4').style.color = "black";
+                setBool(false);
+            }
 
         if(e === 'option3'){
             document.getElementById(e).style.background = "black";
@@ -54,10 +60,71 @@ const QX55Q1 = () => {
     }
     function handleSubmit(){
         if(bool === false){
+            if(location.state.count === 2){
 
+                // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                // var qn = [1,2,3,4];
+
+                // if (no !== -1) {
+                //     qn.splice(no, 1);
+
+                //     console.log(no)
+                //     console.log(qn)
+
+                //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                // }    
+                
+                navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id}})
+            
+        }
+
+            else{
+                var no = Math.floor(Math.random() * (((3- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                var n = qn[no]
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
+
+                console.log(no)
+                console.log(qn)
+
+                navigate(`/QX55Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+            }
         }
 
         else{
+            if(location.state.count === 2){
+
+                // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                // var qn = [1,2,3,4];
+
+                // if (no !== -1) {
+                //     qn.splice(no, 1);
+
+                //     console.log(no)
+                //     console.log(qn)
+
+                //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                // }    
+                
+                navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+            
+        }
+
+            else{
+                var no = Math.floor(Math.random() * (((3- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                var n = qn[no]
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
+
+                console.log(no)
+                console.log(qn)
+
+                navigate(`/QX55Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+            }
 
         }
     }

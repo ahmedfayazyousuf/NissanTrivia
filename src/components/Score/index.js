@@ -1,10 +1,26 @@
-
-
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
+import firebase from '../../firbase';
 const Score = () => {
-
+    const location = useLocation();
+    const navigate = useNavigate();
         function Handleclick(e){
             
         }
+
+    async function updateUser(){
+        const CarUser = firebase.firestore().collection("CarUsers").doc(location.state.id);
+        await CarUser.update({
+            Score: location.state.score
+        });
+    }
+
+    useEffect(()=>{
+        
+        updateUser(); 
+
+    },[])
     
     return(
         <div style={{backgroundColor: 'white', height: '100vh', width: '100vw', overflowY: 'hidden'}}>
@@ -22,12 +38,12 @@ const Score = () => {
 
                     <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center'}} id='slotparent'>
                         <p>CORRECT ANSWERS</p>
-                        <p class="sss" style={{marginLeft: '15px'}}>X</p>
+                        <p class="sss" style={{marginLeft: '15px'}}>{location.state.score}</p>
                     </div>
 
                     <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center'}} id='slotparent'>
                         <p>WRONG ANSWERS</p>
-                        <p class="sss" style={{marginLeft: '15px'}}>X</p>
+                        <p class="sss" style={{marginLeft: '15px'}}>{5-location.state.score}</p>
                     </div>
                 </div>
                 

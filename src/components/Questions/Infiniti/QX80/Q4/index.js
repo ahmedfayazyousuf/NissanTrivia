@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
-
+import { useNavigate } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 const QX80Q4 = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
 
         const [bool, setBool] = useState(false); 
 
@@ -55,25 +58,77 @@ const QX80Q4 = () => {
                 setBool(false);
             }
         }
+
         function handleSubmit(){
-            if(bool === false){
-    
-            }
-    
+        if(bool === false){
+            if(location.state.count === 2){
+
+                // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                // var qn = [1,2,3,4];
+
+                // if (no !== -1) {
+                //     qn.splice(no, 1);
+
+                //     console.log(no)
+                //     console.log(qn)
+
+                //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                // }    
+                
+                navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id}})
+            
+        }
+
             else{
-    
+                var no = Math.floor(Math.random() * (((3- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                var n = qn[no]
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
+
+                console.log(no)
+                console.log(qn)
+
+                navigate(`/QX80Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
             }
         }
 
-        function handleSubmit(){
-            if(bool === false){
+        else{
+            if(location.state.count === 2){
 
-            }
+                // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                // var qn = [1,2,3,4];
+
+                // if (no !== -1) {
+                //     qn.splice(no, 1);
+
+                //     console.log(no)
+                //     console.log(qn)
+
+                //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                // }    
+                
+                navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+            
+        }
 
             else{
+                var no = Math.floor(Math.random() * (((3- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                var n = qn[no]
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
 
+                console.log(no)
+                console.log(qn)
+
+                navigate(`/QX80Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
             }
+
         }
+    }
     
     return(
         <div style={{backgroundColor: 'white', height: '100vh', width: '100vw', overflowY: 'hidden'}}>
