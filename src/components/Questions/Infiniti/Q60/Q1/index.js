@@ -1,7 +1,10 @@
 import React from "react";
 import { useState } from "react"
-
+import { useNavigate } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 const Q60Q1 = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
     const [bool, setBool] = useState(false); 
     function Handleclick(e){
         if(e === 'option1'){
@@ -52,12 +55,74 @@ const Q60Q1 = () => {
             setBool(false);
         }
     }
+    
     function handleSubmit(){
         if(bool === false){
+            if(location.state.count === 2){
 
+                // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                // var qn = [1,2,3,4];
+
+                // if (no !== -1) {
+                //     qn.splice(no, 1);
+
+                //     console.log(no)
+                //     console.log(qn)
+
+                //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                // }    
+                
+                navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id}})
+            
+        }
+
+            else{
+                var no = Math.floor(Math.random() * (((3- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                var n = qn[no]
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
+
+                console.log(no)
+                console.log(qn)
+
+                navigate(`/Q60Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+            }
         }
 
         else{
+            if(location.state.count === 2){
+
+                // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                // var qn = [1,2,3,4];
+
+                // if (no !== -1) {
+                //     qn.splice(no, 1);
+
+                //     console.log(no)
+                //     console.log(qn)
+
+                //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
+                // }    
+                
+                navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+            
+        }
+
+            else{
+                var no = Math.floor(Math.random() * (((3- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                var n = qn[no]
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
+
+                console.log(no)
+                console.log(qn)
+
+                navigate(`/Q60Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+            }
 
         }
     }
@@ -83,7 +148,7 @@ return(
                 <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"170px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Pleather</button>
             </div>
 
-            <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}}>NEXT</button>
+            <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                 <img src="https://firebasestorage.googleapis.com/v0/b/assetuploadformbuilder.appspot.com/o/images%2Fgetreadyexplore.png?alt=media&token=bedd3483-ca06-414d-940e-9185a0b808a1" alt="Logo" style={{width: '20vh', marginTop: '30px', marginBottom: '10px'}}/>
