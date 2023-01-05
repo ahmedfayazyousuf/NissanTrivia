@@ -135,6 +135,17 @@ import XTrailQ8 from './components/Questions/Nissan/XTrail/Q8';
 import XTrailQ9 from './components/Questions/Nissan/XTrail/Q9';
 import XTrailQ10 from './components/Questions/Nissan/XTrail/Q10';
 
+import MaximaQ1 from './components/Questions/Nissan/Maxima/Q1';
+import MaximaQ2 from './components/Questions/Nissan/Maxima/Q2';
+import MaximaQ3 from './components/Questions/Nissan/Maxima/Q3';
+import MaximaQ4 from './components/Questions/Nissan/Maxima/Q4';
+import MaximaQ5 from './components/Questions/Nissan/Maxima/Q5';
+import MaximaQ6 from './components/Questions/Nissan/Maxima/Q6';
+import MaximaQ7 from './components/Questions/Nissan/Maxima/Q7';
+import MaximaQ8 from './components/Questions/Nissan/Maxima/Q8';
+import MaximaQ9 from './components/Questions/Nissan/Maxima/Q9';
+import MaximaQ10 from './components/Questions/Nissan/Maxima/Q10';
+
 const App = () => {
   return (
     <>
@@ -265,6 +276,17 @@ const App = () => {
           <Route path="/XTrailQ8" element={<XTrailQ8 />} />
           <Route path="/XTrailQ9" element={<XTrailQ9 />} />
           <Route path="/XTrailQ10" element={<XTrailQ10 />} />
+
+          <Route path="/MaximaQ1" element={<MaximaQ1 />} />
+          <Route path="/MaximaQ2" element={<MaximaQ2 />} />
+          <Route path="/MaximaQ3" element={<MaximaQ3 />} />
+          <Route path="/MaximaQ4" element={<MaximaQ4 />} />
+          <Route path="/MaximaQ5" element={<MaximaQ5 />} />
+          <Route path="/MaximaQ6" element={<MaximaQ6 />} />
+          <Route path="/MaximaQ7" element={<MaximaQ7 />} />
+          <Route path="/MaximaQ8" element={<MaximaQ8 />} />
+          <Route path="/MaximaQ9" element={<MaximaQ9 />} />
+          <Route path="/MaximaQ10" element={<MaximaQ10 />} />
       </Routes>
     </>
   )
