@@ -23,8 +23,8 @@ const Home = () => {
 
         CarUsers.add({Email:Email, Code:Loc}).then((doc)=>{
             var id = doc.id;
-
-            navigate(`/Instructions`,{state:{id:id,Loc:Loc}});
+            let Loc2 = Loc.slice(0,-1);
+            navigate(`/Instructions`,{state:{id:id,Loc:Loc2}});
         });
 
         

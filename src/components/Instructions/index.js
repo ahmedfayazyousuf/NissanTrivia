@@ -58,7 +58,7 @@ const Instructions = () => {
         var Loc = location.state.Loc;
         var id = location.state.id;
         var time = new Date();
-        if (Loc === '1'){
+        if (Loc === '84229'){
 
             var qn = [1,2,3,4,5,6];
 
@@ -76,7 +76,7 @@ const Instructions = () => {
             }
         }
 
-        if (Loc === '2'){
+        if (Loc === '84232'){
 
             var qn = [1,2,3,4,5,6];
 
@@ -94,7 +94,7 @@ const Instructions = () => {
             }
         }
 
-        if (Loc === '3'){
+        if (Loc === '70913' || Loc === '84922' || Loc === '80592' || Loc === '39512' || Loc === '17834'){
 
             var qn = [1,2,3,4,5,6];
 
@@ -112,7 +112,7 @@ const Instructions = () => {
             }
         }
 
-        if (Loc === '4'){
+        if (Loc === '18026' || Loc === '16798'){
 
             var qn = [1,2,3,4,5,6];
 
@@ -130,7 +130,7 @@ const Instructions = () => {
             }
         }
 
-        if (Loc === '5'){
+        if (Loc === '488451' || Loc === '84819'){
 
             var qn = [1,2,3,4,5,6];
 
@@ -148,7 +148,7 @@ const Instructions = () => {
             }
         }
 
-        if (Loc === '6'){
+        if (Loc === '20164' || Loc === '81037'){
 
             var qn = [1,2,3,4,5,6];
 
@@ -166,7 +166,7 @@ const Instructions = () => {
             }
         }
 
-        if(Loc === '7'){
+        if(Loc === '92079' || Loc === '75321' || Loc === '75319' ){
             var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -183,7 +183,7 @@ const Instructions = () => {
             }
         }
 
-        if(Loc === '8'){
+        if(Loc === '57721' || Loc === '27802' || Loc === '74529'){
             var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -200,7 +200,7 @@ const Instructions = () => {
             }
         }
 
-        if(Loc === '9'){
+        if(Loc === '61170'){
             var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -217,7 +217,7 @@ const Instructions = () => {
             }
         }
 
-        if(Loc === '10'){
+        if(Loc === '96430'){
             var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -234,7 +234,7 @@ const Instructions = () => {
             }
         }
 
-        if(Loc === '11'){
+        if(Loc === '97035'){
             var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -251,7 +251,7 @@ const Instructions = () => {
             }
         }
 
-        if(Loc === '12'){
+        if(Loc === '74925'){
             var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
