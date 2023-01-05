@@ -12,7 +12,8 @@ const Home = () => {
 
     const buttonRef = useRef(null);
     const navigate = useNavigate();
-    const [emailB, setEmailB] = useState(false);    
+    const [emailB, setEmailB] = useState(false); 
+    const [codeB, setCodeB] = useState(false);   
     
     const [agree, setAgree] = useState(false)
 
@@ -28,13 +29,15 @@ const Home = () => {
         if (Email === "" || !Email.match(validRegex))
         {
             if(emailB === false){
-                const el = document.createElement("p");
-                const name = document.getElementById('loccode')
-                el.id = "emailerr"
-                el.style.color = "red";
-                el.style.fontSize = "10px";
-                el.innerHTML = "Invalid Email"
-                name.appendChild(el);
+                // const el = document.createElement("p");
+                // const name = document.getElementById('parent')
+                // el.id = "emailerr"
+                // el.style.color = "red";
+                // el.style.fontSize = "10px";
+                // el.innerHTML = "Invalid Email"
+                // name.appendChild(el);
+
+                document.getElementById('error').innerHTML = "Invalid Email"
                 setEmailB(true)
             }
             console.log("lessgooo")
@@ -42,19 +45,11 @@ const Home = () => {
         }
 
         if (Loc === "" ){
+            document.getElementById('error').innerHTML = "Invalid Code"
             return;
         }
 
-        if(agree === false){
-            return;
-        }
-        
 
-        
-
-        CarUsers.add({Email:Email, Code:Loc}).then((doc)=>{
-            var id = doc.id;
-            var time = new Date();
             let Loc2 = Loc.slice(0,-1);
 
             var last = Loc.slice(-1);
@@ -72,6 +67,18 @@ const Home = () => {
 
                             if(last !== "P"){
                                 if(last !== "p"){
+
+                                    console.log("lesssndosnd")
+                          
+                                        // const el = document.createElement("p");
+                                        // const name = document.getElementById('parent')
+                                        // el.id = "emailerr"
+                                        // el.style.color = "red";
+                                        // el.style.fontSize = "10px";
+                                        // el.innerHTML = "Invalid Email"
+                                        // name.appendChild(el);
+                                        document.getElementById('error').innerHTML = "Invalid Code"
+                                    
                                     return;
                                 }
                             }
@@ -82,6 +89,19 @@ const Home = () => {
                 }
 
             }
+
+        if(agree === false){
+            document.getElementById('error').innerHTML = "Please sign the form"
+            return;
+        }
+        
+
+        
+
+        CarUsers.add({Email:Email, Code:Loc}).then((doc)=>{
+            var id = doc.id;
+            var time = new Date();
+            
 
 
 
@@ -428,7 +448,10 @@ const Home = () => {
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '350px', gap:'10px', alignItems: 'center'}}>
                         <input type="email" id='email' placeholder='ENTER YOUR COMPANY REGISTERED EMAIL' style={{width:"280px", height: '30px', textAlign: 'center', fontSize: '10px'}} />
-                        <input type="loccode" id="loccode" placeholder='ENTER LOCATION CODE (ENTERED BY MARSHAL)' style={{width:"280px", height: '30px', textAlign: 'center', fontSize: '10px'}} /> 
+                        <div id='parent'>
+                            <input type="loccode" id="loccode" placeholder='ENTER LOCATION CODE (ENTERED BY MARSHAL)' style={{width:"280px", height: '30px', textAlign: 'center', fontSize: '10px'}} /> 
+                            <p id='error' style= {{ fontSize: "10px", color:"red"}}></p>
+                        </div>
                         <button ref={buttonRef} className="grab" style={{width:"200px", height: '35px', marginTop: '20px', margin: '10px', borderRadius: '10px', backgroundColor: 'white'}} onClick={CheckData}>LET'S PLAY</button>
                 </div>
 
