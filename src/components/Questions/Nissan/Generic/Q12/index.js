@@ -3,7 +3,7 @@ import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
-const NissanGenericQ8 = () => {
+const NissanGenericQ12 = () => {
         const location = useLocation();
         const navigate = useNavigate();
         const [bool, setBool] = useState(false); 
@@ -105,7 +105,7 @@ const NissanGenericQ8 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p style={{fontSize: '15px', marginTop: '5px'}}>NISMO stands for Nissan Motor Sports </p>
+                <p style={{fontSize: '15px', marginTop: '5px'}}>Nissan Way teaches us to be strong, but not rude, to be confident but not arrogant</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', overflowX: 'hidden'}}>
@@ -124,4 +124,4 @@ const NissanGenericQ8 = () => {
     )
 }
 
-export default NissanGenericQ8
+export default NissanGenericQ12

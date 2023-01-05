@@ -62,6 +62,11 @@ import NissanGenericQ7 from './components/Questions/Nissan/Generic/Q7';
 import NissanGenericQ8 from './components/Questions/Nissan/Generic/Q8';
 import NissanGenericQ9 from './components/Questions/Nissan/Generic/Q9';
 import NissanGenericQ10 from './components/Questions/Nissan/Generic/Q10';
+import NissanGenericQ11 from './components/Questions/Nissan/Generic/Q11';
+import NissanGenericQ12 from './components/Questions/Nissan/Generic/Q12';
+import NissanGenericQ13 from './components/Questions/Nissan/Generic/Q13';
+import NissanGenericQ14 from './components/Questions/Nissan/Generic/Q14';
+import NissanGenericQ15 from './components/Questions/Nissan/Generic/Q15';
 
 import AltimaQ1 from './components/Questions/Nissan/Altima/Q1';
 import AltimaQ2 from './components/Questions/Nissan/Altima/Q2';
@@ -187,6 +192,11 @@ const App = () => {
           <Route path="/NissanGenericQ8" element={<NissanGenericQ8 />} />
           <Route path="/NissanGenericQ9" element={<NissanGenericQ9 />} />
           <Route path="/NissanGenericQ10" element={<NissanGenericQ10 />} />
+          <Route path="/NissanGenericQ11" element={<NissanGenericQ11 />} />
+          <Route path="/NissanGenericQ12" element={<NissanGenericQ12 />} />
+          <Route path="/NissanGenericQ13" element={<NissanGenericQ13 />} />
+          <Route path="/NissanGenericQ14" element={<NissanGenericQ14 />} />
+          <Route path="/NissanGenericQ15" element={<NissanGenericQ15 />} />
 
           <Route path="/AltimaQ1" element={<AltimaQ1 />} />
           <Route path="/AltimaQ2" element={<AltimaQ2 />} />

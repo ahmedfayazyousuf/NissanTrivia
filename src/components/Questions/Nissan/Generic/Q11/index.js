@@ -3,7 +3,7 @@ import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
-const NissanGenericQ8 = () => {
+const NissanGenericQ11 = () => {
         const location = useLocation();
         const navigate = useNavigate();
         const [bool, setBool] = useState(false); 
@@ -16,7 +16,7 @@ const NissanGenericQ8 = () => {
                 document.getElementById(e).style.color = "white";
                 document.getElementById('option2').style.background = "transparent";
                 document.getElementById('option2').style.color = "black";
-                setBool(true);
+                setBool(false);
             }
 
             if(e === 'option2'){
@@ -24,7 +24,7 @@ const NissanGenericQ8 = () => {
                 document.getElementById(e).style.color = "white";
                 document.getElementById('option1').style.background = "transparent";
                 document.getElementById('option1').style.color = "black";
-                setBool(false);
+                setBool(true);
             }
         }
 
@@ -105,7 +105,7 @@ const NissanGenericQ8 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p style={{fontSize: '15px', marginTop: '5px'}}>NISMO stands for Nissan Motor Sports </p>
+                <p style={{fontSize: '15px', marginTop: '5px'}}>Thinking outside the box means we can wait for a crisis to happen so that we can develop the best countermeasure plan. </p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', overflowX: 'hidden'}}>
@@ -124,4 +124,4 @@ const NissanGenericQ8 = () => {
     )
 }
 
-export default NissanGenericQ8
+export default NissanGenericQ11

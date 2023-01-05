@@ -3,7 +3,7 @@ import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
-const NissanGenericQ8 = () => {
+const NissanGenericQ14 = () => {
         const location = useLocation();
         const navigate = useNavigate();
         const [bool, setBool] = useState(false); 
@@ -16,7 +16,7 @@ const NissanGenericQ8 = () => {
                 document.getElementById(e).style.color = "white";
                 document.getElementById('option2').style.background = "transparent";
                 document.getElementById('option2').style.color = "black";
-                setBool(true);
+                setBool(false);
             }
 
             if(e === 'option2'){
@@ -24,7 +24,7 @@ const NissanGenericQ8 = () => {
                 document.getElementById(e).style.color = "white";
                 document.getElementById('option1').style.background = "transparent";
                 document.getElementById('option1').style.color = "black";
-                setBool(false);
+                setBool(true);
             }
         }
 
@@ -105,13 +105,13 @@ const NissanGenericQ8 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p style={{fontSize: '15px', marginTop: '5px'}}>NISMO stands for Nissan Motor Sports </p>
+                <p style={{fontSize: '15px', marginTop: '5px'}}>Mr Smit, a manager in the Marketing department usually avoids bad news or criticism since he only wants to show & discuss positive about Nissan. Does this behaviour demonstrate principles of Nissan Way?</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', overflowX: 'hidden'}}>
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '70%', overflowX: 'hidden'}} id='slotparent'>
-                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>True</button>
-                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>False</button>
+                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Yes</button>
+                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>No</button>
                 </div>
 
                 <button className="grab" style={{width:"220px", marginTop: '10px', marginBottom: '5px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
@@ -124,4 +124,4 @@ const NissanGenericQ8 = () => {
     )
 }
 
-export default NissanGenericQ8
+export default NissanGenericQ14
