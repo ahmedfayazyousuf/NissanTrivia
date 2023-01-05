@@ -65,6 +65,8 @@ const InfinitiGenericQ1 = () => {
 
         function handleSubmit(){
 
+            var time = new Date();
+
 
 
             if(bool === false){
@@ -79,7 +81,7 @@ const InfinitiGenericQ1 = () => {
                         console.log(no)
                         console.log(qn)
 
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:time}})
                     }        
                 
             }
@@ -95,7 +97,7 @@ const InfinitiGenericQ1 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:time}})
             }
             }
 
@@ -112,7 +114,7 @@ const InfinitiGenericQ1 = () => {
                         console.log(no)
                         console.log(qn)
 
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:time}})
                     }        
                 
             }
@@ -128,7 +130,7 @@ const InfinitiGenericQ1 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
+                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:time}})
             }
 
             }
