@@ -143,8 +143,6 @@ import MaximaQ5 from './components/Questions/Nissan/Maxima/Q5';
 import MaximaQ6 from './components/Questions/Nissan/Maxima/Q6';
 import MaximaQ7 from './components/Questions/Nissan/Maxima/Q7';
 import MaximaQ8 from './components/Questions/Nissan/Maxima/Q8';
-import MaximaQ9 from './components/Questions/Nissan/Maxima/Q9';
-import MaximaQ10 from './components/Questions/Nissan/Maxima/Q10';
 
 const App = () => {
   return (
@@ -285,8 +283,6 @@ const App = () => {
           <Route path="/MaximaQ6" element={<MaximaQ6 />} />
           <Route path="/MaximaQ7" element={<MaximaQ7 />} />
           <Route path="/MaximaQ8" element={<MaximaQ8 />} />
-          <Route path="/MaximaQ9" element={<MaximaQ9 />} />
-          <Route path="/MaximaQ10" element={<MaximaQ10 />} />
       </Routes>
     </>
   )

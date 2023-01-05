@@ -142,7 +142,7 @@ const InfinitiGenericQ3 = () => {
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Infinity and Beyond</button>
+                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Infinity & Beyond</button>
                     <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>The Infinite Road</button>
                 </div>
 

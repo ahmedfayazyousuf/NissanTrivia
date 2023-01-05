@@ -20,7 +20,7 @@ const MaximaQ2 = () => {
                 document.getElementById('option3').style.color = "black";
                 document.getElementById('option4').style.background = "transparent";
                 document.getElementById('option4').style.color = "black";
-                setBool(true);
+                setBool(false);
             }
 
             if(e === 'option2'){
@@ -32,7 +32,7 @@ const MaximaQ2 = () => {
                 document.getElementById('option3').style.background = "transparent";
                 document.getElementById('option4').style.background = "transparent";
                 document.getElementById('option4').style.color = "black";
-                setBool(false);
+                setBool(true);
             }
 
             if(e === 'option3'){
