@@ -152,6 +152,8 @@ import Nismo370ZQ5 from './components/Questions/Nissan/Nismo370Z/Q5';
 import Nismo370ZQ6 from './components/Questions/Nissan/Nismo370Z/Q6';
 import Nismo370ZQ7 from './components/Questions/Nissan/Nismo370Z/Q7';
 import Nismo370ZQ8 from './components/Questions/Nissan/Nismo370Z/Q8';
+import Nismo370ZQ9 from './components/Questions/Nissan/Nismo370Z/Q9';
+import Nismo370ZQ10 from './components/Questions/Nissan/Nismo370Z/Q10';
 
 const App = () => {
   return (
@@ -301,6 +303,8 @@ const App = () => {
           <Route path="/Nismo370ZQ6" element={<Nismo370ZQ6 />} />
           <Route path="/Nismo370ZQ7" element={<Nismo370ZQ7 />} />
           <Route path="/Nismo370ZQ8" element={<Nismo370ZQ8 />} />
+          <Route path="/Nismo370ZQ9" element={<Nismo370ZQ9 />} />
+          <Route path="/Nismo370ZQ10" element={<Nismo370ZQ10 />} />
       </Routes>
     </>
   )
