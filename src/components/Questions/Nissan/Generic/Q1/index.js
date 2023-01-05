@@ -43,7 +43,7 @@ const NissanGenericQ1 = () => {
         }
 
         function handleSubmit(){
-
+            var time = new Date();
 
 
             if(bool === false){
@@ -58,7 +58,7 @@ const NissanGenericQ1 = () => {
                         console.log(no)
                         console.log(qn)
 
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:time}})
                     }        
                 
             }
@@ -74,7 +74,7 @@ const NissanGenericQ1 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/NissanGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                navigate(`/NissanGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:time}})
             }
             }
 
@@ -91,7 +91,7 @@ const NissanGenericQ1 = () => {
                         console.log(no)
                         console.log(qn)
 
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:time}})
                     }        
                 
             }
@@ -107,7 +107,7 @@ const NissanGenericQ1 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/NissanGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
+                navigate(`/NissanGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:time}})
             }
 
             }

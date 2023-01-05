@@ -48,14 +48,262 @@ const Home = () => {
         if(agree === false){
             return;
         }
-        buttonRef.current.disabled = true;
+        
 
         
 
         CarUsers.add({Email:Email, Code:Loc}).then((doc)=>{
             var id = doc.id;
+            var time = new Date();
             let Loc2 = Loc.slice(0,-1);
-            navigate(`/Instructions`,{state:{id:id,Loc:Loc2}});
+
+            var last = Loc.slice(-1);
+
+            if(last !== "J"){
+                console.log("lol",last)
+                if(last !== "j"){
+                    console.log("lol",last)
+                        
+                    if(last !== "N"){
+                        console.log("lol",last)
+                        if(last !== "n"){
+                            console.log("lol",last)
+                            return;
+                        }
+                    }
+               
+                }
+
+            }
+
+
+
+            
+            if (Loc2 === '84229'){
+
+                var qn = [2,3,4,5,6];
+    
+                var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Q50",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if (Loc2 === '84232'){
+    
+                var qn = [2,3,4,5,6];
+    
+                var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Q60",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if (Loc2 === '70913' || Loc2 === '84922' || Loc2 === '80592' || Loc2 === '39512' || Loc2 === '17834'){
+    
+                var qn = [2,3,4,5,6];
+    
+                var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX50",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if (Loc2 === '18026' || Loc2 === '16798'){
+    
+                var qn = [2,3,4,5,6];
+    
+                var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX55",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if (Loc2 === '488451' || Loc2 === '84819'){
+    
+                var qn = [2,3,4,5,6];
+    
+                var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX60",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if (Loc2 === '20164' || Loc2 === '81037'){
+    
+                var qn = [2,3,4,5,6];
+    
+                var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX80",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if(Loc2 === '92079' || Loc2 === '75321' || Loc2 === '75319' ){
+                var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    
+                var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Altima",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if(Loc2 === '57721' || Loc2 === '27802' || Loc2 === '74529'){
+                var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    
+                var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Patrol",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if(Loc2 === '61170'){
+                var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    
+                var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Pathfinder",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if(Loc2 === '96430'){
+                var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    
+                var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Kicks",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if(Loc2 === '97035'){
+                var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    
+                var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"NissanZ",id:id}})
+                }
+                buttonRef.current.disabled = true;
+            }
+    
+            if(Loc2 === '74925'){
+                var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    
+                var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"XTrail",id:id}})
+                }
+
+                buttonRef.current.disabled = true;
+            }
+
+
+            // navigate(`/Instructions`,{state:{id:id,Loc:Loc2}});
         });
 
        
@@ -134,14 +382,14 @@ const Home = () => {
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '350px', gap:'10px', alignItems: 'center'}}>
-                        <input type="email" id='email' placeholder='ENTER YOUR EMAIL' style={{width:"240px", height: '30px', textAlign: 'center', fontSize: '10px'}} />
-                        <input type="loccode" id="loccode" placeholder='ENTER LOCATION CODE' style={{width:"240px", height: '30px', textAlign: 'center', fontSize: '10px'}} /> 
+                        <input type="email" id='email' placeholder='ENTER YOUR COMPANY REGISTERED EMAIL' style={{width:"280px", height: '30px', textAlign: 'center', fontSize: '10px'}} />
+                        <input type="loccode" id="loccode" placeholder='ENTER LOCATION CODE (ENTERED BY MARSHAL)' style={{width:"280px", height: '30px', textAlign: 'center', fontSize: '10px'}} /> 
                         <button ref={buttonRef} className="grab" style={{width:"200px", height: '35px', marginTop: '20px', margin: '10px', borderRadius: '10px', backgroundColor: 'white'}} onClick={CheckData}>LET'S PLAY</button>
                 </div>
 
                 <div className="form-check" id="checkthreewrap" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: '10px'}}>
                     <input className="form-check-input" id="checkthree" type="checkbox" value="" style={{backgroundColor: '#061A1B', borderColor: 'white', Size: '8px'}} onChange={handleChange} required/>
-                    <label className="form-check-label" style={{fontSize: '8px', color:'white'}}>Agree to terms and conditions.</label>
+                    <label className="form-check-label" style={{fontSize: '8px', color:'white'}}>Signed the Disclaimer Forms.</label>
                 </div>
 
                 <div>
