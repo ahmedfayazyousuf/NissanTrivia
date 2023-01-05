@@ -40,7 +40,7 @@ const Q60Q4 = () => {
                 //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
                 // }    
                 
-                navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id}})
+                navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
             
         }
 
@@ -55,7 +55,7 @@ const Q60Q4 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/Q60Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+                navigate(`/Q60Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
             }
         }
 
@@ -74,7 +74,7 @@ const Q60Q4 = () => {
                 //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
                 // }    
                 
-                navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
             
         }
 
@@ -89,7 +89,7 @@ const Q60Q4 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/Q60Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                navigate(`/Q60Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
             }
 
         }

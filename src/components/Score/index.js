@@ -10,9 +10,15 @@ const Score = () => {
         }
 
     async function updateUser(){
+        var time2 = new Date();
+        var time = location.state.time;
+        var timetaken = (time2 - time) / 1000;
+        console.log((time2 - time) / 1000," seconds")
         const CarUser = firebase.firestore().collection("CarUsers").doc(location.state.id);
         await CarUser.update({
-            Score: location.state.score
+            Score: location.state.score,
+            TimeTaken: timetaken
+
         });
     }
 

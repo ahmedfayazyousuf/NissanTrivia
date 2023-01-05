@@ -3,10 +3,12 @@ import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
+import { useEffect } from "react";
 const GenericQ5 = () => {
     const [bool, setBool] = useState(false); 
     const location = useLocation();
     const navigate = useNavigate();
+    var time = location.state.time;
         function Handleclick(e){
             if(e === 'option1'){
                 document.getElementById(e).style.background = "black";
@@ -57,6 +59,8 @@ const GenericQ5 = () => {
             }
         }
 
+
+
         function handleSubmit(){
 
             if(bool === false){
@@ -71,7 +75,7 @@ const GenericQ5 = () => {
                         console.log(no)
                         console.log(qn)
 
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
                     }        
                 
             }
@@ -87,7 +91,7 @@ const GenericQ5 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
             }
             }
 
@@ -104,7 +108,7 @@ const GenericQ5 = () => {
                         console.log(no)
                         console.log(qn)
 
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
                     }        
                 
             }
@@ -120,7 +124,7 @@ const GenericQ5 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
             }
 
             }

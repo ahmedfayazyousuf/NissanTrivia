@@ -57,6 +57,7 @@ const Instructions = () => {
 
         var Loc = location.state.Loc;
         var id = location.state.id;
+        var time = new Date();
         if (Loc === '1'){
 
             var qn = [1,2,3,4,5,6];
@@ -71,7 +72,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Q50",id:id}})
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Q50",id:id,time:time}})
             }
         }
 
@@ -89,7 +90,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Q60",id:id}})
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Q60",id:id,time:time}})
             }
         }
 
@@ -107,7 +108,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX50",id:id}})
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX50",id:id,time:time}})
             }
         }
 
@@ -125,7 +126,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX55",id:id}})
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX55",id:id,time:time}})
             }
         }
 
@@ -143,7 +144,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX60",id:id}})
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX60",id:id,time:time}})
             }
         }
 
@@ -161,7 +162,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX80",id:id}})
+                navigate(`/InfinitiGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"QX80",id:id,time:time}})
             }
         }
 
@@ -178,7 +179,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Altima",id:id}})
+                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Altima",id:id,time:time}})
             }
         }
 
@@ -195,7 +196,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Patrol",id:id}})
+                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Patrol",id:id,time:time}})
             }
         }
 
@@ -212,7 +213,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Pathfinder",id:id}})
+                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Pathfinder",id:id,time:time}})
             }
         }
 
@@ -229,7 +230,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Kicks",id:id}})
+                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"Kicks",id:id,time:time}})
             }
         }
 
@@ -246,7 +247,7 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"NissanZ",id:id}})
+                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"NissanZ",id:id,time:time}})
             }
         }
 
@@ -263,9 +264,12 @@ const Instructions = () => {
                 console.log(qn);
 
                 
-                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"XTrail",id:id}})
+                navigate(`/NissanGenericQ${no+1}`,{state:{count:1,qns:qn,score:0,car:"XTrail",id:id,time:time}})
             }
         }
+
+
+        
     }
 
 return(

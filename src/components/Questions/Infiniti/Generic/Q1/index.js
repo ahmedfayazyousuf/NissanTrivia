@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +7,8 @@ const InfinitiGenericQ1 = () => {
         const location = useLocation();
         const navigate = useNavigate();
         const [bool, setBool] = useState(false); 
+
+
         function Handleclick(e){
 
             
@@ -60,7 +62,10 @@ const InfinitiGenericQ1 = () => {
             }
         }
 
+
         function handleSubmit(){
+
+
 
             if(bool === false){
                 if(location.state.count === 3){
@@ -74,7 +79,7 @@ const InfinitiGenericQ1 = () => {
                         console.log(no)
                         console.log(qn)
 
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
                     }        
                 
             }
@@ -90,7 +95,7 @@ const InfinitiGenericQ1 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
             }
             }
 
@@ -107,7 +112,7 @@ const InfinitiGenericQ1 = () => {
                         console.log(no)
                         console.log(qn)
 
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
                     }        
                 
             }
@@ -123,7 +128,7 @@ const InfinitiGenericQ1 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
             }
 
             }

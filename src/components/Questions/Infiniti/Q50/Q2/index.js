@@ -2,10 +2,12 @@ import React from "react";
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
+import { useEffect } from "react";
 const Q50Q2 = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [bool, setBool] = useState(false); 
+    var time = location.state.time;
     function Handleclick(e){
         if(e === 'option1'){
             document.getElementById(e).style.background = "black";
@@ -56,6 +58,8 @@ const Q50Q2 = () => {
         }
     }
 
+
+
     function handleSubmit(){
         if(bool === false){
             if(location.state.count === 2){
@@ -72,7 +76,7 @@ const Q50Q2 = () => {
                 //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
                 // }    
                 
-                navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id}})
+                navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
             
         }
 
@@ -87,7 +91,7 @@ const Q50Q2 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/Q50Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+                navigate(`/Q50Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
             }
         }
 
@@ -106,7 +110,7 @@ const Q50Q2 = () => {
                 //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
                 // }    
                 
-                navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
             
         }
 
@@ -121,7 +125,7 @@ const Q50Q2 = () => {
                 console.log(no)
                 console.log(qn)
 
-                navigate(`/Q50Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                navigate(`/Q50Q${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
             }
 
         }
