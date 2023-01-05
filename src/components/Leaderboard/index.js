@@ -1,5 +1,14 @@
+import { useEffect } from 'react';
 import NissanLogo from '../Z_Images/nissanlogo.png';
+import firebase from '../../firbase';
+
 const Leaderboard = () => {
+
+    useEffect(()=>{
+         firebase.firestore().collection("CarUsers").orderBy("Score", "desc").orderBy("TimeTaken").get().then((doc) => {
+            console.log(doc);
+        });
+    },[])
 
 return(
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', textAlign: 'center',backgroundColor: 'white', height: '100vh', width: '100vw'}}>
