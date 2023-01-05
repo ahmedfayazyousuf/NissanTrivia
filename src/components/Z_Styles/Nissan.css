@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5,h6,a,button,div, tr, td, table, th, .sss{
     font-family: myFont2;
     src:url(NissanBrand-Regular.ttf);
 }
-h4, p, label{
+h4, p, label, td{
     font-family: myFont2;
 }
 
@@ -50,7 +50,7 @@ h4, p, label{
     margin-bottom: 20px;
     margin-right: 30px;
 }
-/*
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -99,4 +99,3 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-*/

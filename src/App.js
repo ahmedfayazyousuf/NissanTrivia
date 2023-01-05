@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import Instructions from './components/Instructions';
 import Score from './components/Score';
 import Error from './components/Error/Error';
+import Leaderboard from './components/Leaderboard';
 
 
 //INFINITI
@@ -141,6 +142,7 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route path="/Instructions" element={<Instructions />} />
           <Route path="/Score" element={<Score />} />
+          <Route path="/Leaderboard" element={<Leaderboard />} />
           <Route path="*" element={<Error />} />
           
           {/* INFINITI */}
