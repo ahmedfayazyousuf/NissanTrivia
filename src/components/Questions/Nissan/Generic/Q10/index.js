@@ -107,7 +107,7 @@ const NissanGenericQ10 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p style={{fontSize: '15px', marginTop: '5px'}}>When making decisions, always consider the impact to the customer. In this Nissan Way behaviour, ‘Customer’ includes internal colleagues. </p>
+                <p style={{fontSize: '15px', marginTop: '5px'}}>‘Innovation that Excites’ is Nissan’s latest brand promise.</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', overflowX: 'hidden'}}>
