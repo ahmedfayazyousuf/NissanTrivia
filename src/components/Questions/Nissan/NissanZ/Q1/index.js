@@ -62,71 +62,71 @@ const NissanZQ1 = () => {
 
         function handleSubmit(){
 
-            // if(bool === false){
-            //     if(location.state.count === 3){
+            if(bool === false){
+                if(location.state.count === 3){
 
-            //         var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
-            //         var qn = [1,2,3,4];
-            //         var n = qn[no]
-            //         if (no !== -1) {
-            //             qn.splice(no, 1);
+                    var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                    var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+                    var n = qn[no]
+                    if (no !== -1) {
+                        qn.splice(no, 1);
 
-            //             console.log(no)
-            //             console.log(qn)
+                        console.log(no)
+                        console.log(qn)
 
-            //             navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
-            //         }        
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+                    }        
                 
-            // }
+            }
 
-            // else{
-            //     var no = Math.floor(Math.random() * (((5- location.state.count)-0) - 0 + 1)) + 0;
-            //     var qn = location.state.qns;
-            //     var n = qn[no]
-            //     if (no !== -1) {
-            //         qn.splice(no, 1);
-            //     }
+            else{
+                var no = Math.floor(Math.random() * (((9- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                var n = qn[no]
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
 
-            //     console.log(no)
-            //     console.log(qn)
+                console.log(no)
+                console.log(qn)
 
-            //     navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
-            // }
-            // }
+                navigate(`/NissanGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
+            }
+            }
 
-            // else{
+            else{
 
-            //     if(location.state.count === 3){
+                if(location.state.count === 3){
 
-            //         var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
-            //         var qn = [1,2,3,4];
-            //         var n = qn[no]
-            //         if (no !== -1) {
-            //             qn.splice(no, 1);
+                    var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
+                    var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+                    var n = qn[no]
+                    if (no !== -1) {
+                        qn.splice(no, 1);
 
-            //             console.log(no)
-            //             console.log(qn)
+                        console.log(no)
+                        console.log(qn)
 
-            //             navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
-            //         }        
+                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+                    }        
                 
-            // }
+            }
 
-            // else{
-            //     var no = Math.floor(Math.random() * (((5- location.state.count)-0) - 0 + 1)) + 0;
-            //     var qn = location.state.qns;
-            //     var n = qn[no]
-            //     if (no !== -1) {
-            //         qn.splice(no, 1);
-            //     }
+            else{
+                var no = Math.floor(Math.random() * (((9- location.state.count)-0) - 0 + 1)) + 0;
+                var qn = location.state.qns;
+                var n = qn[no]
+                if (no !== -1) {
+                    qn.splice(no, 1);
+                }
 
-            //     console.log(no)
-            //     console.log(qn)
+                console.log(no)
+                console.log(qn)
 
-            //     navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
-            // }
+                navigate(`/NissanGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+            }
 
-            // }
+            }
             
         }
     
@@ -137,21 +137,24 @@ const NissanZQ1 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}}>What is the Generation of the new vehicle?</p>
+                <p style={{fontSize: '15px', marginTop: '10px'}} >What is the Generation of the new vehicle?</p>
             </div>
 
-            <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '5px'}}>
-                <div className="slotdiv" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Intelligent Lane Intervention</button>
-                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Intelligent Motion Control</button>
-                    <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Intelligent Traffic Monitor</button>
-                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Intelligent Forward Thinking</button>
+            <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
+                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>7th</button>
+                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>5th</button>
                 </div>
 
-                <button className="grab" style={{width:"220px", marginTop: '10px', marginBottom: '5px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
+                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}}>
+                    <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>6th</button>
+                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>8th</button>
+                </div>
+
+                <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
 
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                    <img src="https://firebasestorage.googleapis.com/v0/b/assetuploadformbuilder.appspot.com/o/images%2Fgetreadyexplore.png?alt=media&token=bedd3483-ca06-414d-940e-9185a0b808a1" alt="Logo" style={{width: '20vh', marginTop: '5px', marginBottom: '10px'}}/>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/assetuploadformbuilder.appspot.com/o/images%2Fgetreadyexplore.png?alt=media&token=bedd3483-ca06-414d-940e-9185a0b808a1" alt="Logo" style={{width: '20vh', marginTop: '30px', marginBottom: '10px'}}/>
                 </div>
             </div>
         </div>
