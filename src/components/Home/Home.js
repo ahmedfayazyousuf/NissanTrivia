@@ -6,18 +6,49 @@ import '../Z_Styles/Nissan.css'
 import firebase from '../../firbase';
 import {useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const Home = () => { 
 
     const buttonRef = useRef(null);
     const navigate = useNavigate();
+    const [emailB, setEmailB] = useState(false);    
+    
+    const [agree, setAgree] = useState(false)
 
     function CheckData(){
-        buttonRef.current.disabled = true;
+
         const Email = document.getElementById("email").value;
         const Loc = document.getElementById("loccode").value;
         const Users = firebase.firestore().collection("Users");
         const CarUsers = firebase.firestore().collection("CarUsers");
+
+        var validRegex =   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+        if (Email === "" || !Email.match(validRegex))
+        {
+            if(emailB === false){
+                const el = document.createElement("p");
+                const name = document.getElementById('loccode')
+                el.id = "emailerr"
+                el.style.color = "red";
+                el.style.fontSize = "10px";
+                el.innerHTML = "Invalid Email"
+                name.appendChild(el);
+                setEmailB(true)
+            }
+            console.log("lessgooo")
+            return;
+        }
+
+        if (Loc === "" ){
+            return;
+        }
+
+        if(agree === false){
+            return;
+        }
+        buttonRef.current.disabled = true;
 
         
 
@@ -26,6 +57,8 @@ const Home = () => {
             let Loc2 = Loc.slice(0,-1);
             navigate(`/Instructions`,{state:{id:id,Loc:Loc2}});
         });
+
+       
 
         
 
@@ -83,6 +116,11 @@ const Home = () => {
         // })
     }
 
+    function handleChange(){
+        setAgree(!agree)
+        console.log(agree)
+    }
+
     return (
         <div>
             
@@ -102,7 +140,7 @@ const Home = () => {
                 </div>
 
                 <div className="form-check" id="checkthreewrap" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: '20px'}}>
-                    <input className="form-check-input" id="checkthree" type="checkbox" value="" style={{backgroundColor: '#061A1B', borderColor: 'white', Size: '8px'}} required/>
+                    <input className="form-check-input" id="checkthree" type="checkbox" value="" style={{backgroundColor: '#061A1B', borderColor: 'white', Size: '8px'}} onChange={handleChange} required/>
                     <label className="form-check-label" style={{fontSize: '8px', color:'white'}}>Agree to terms and conditions.</label>
                 </div>
 
