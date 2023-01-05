@@ -67,8 +67,15 @@ const Home = () => {
                     if(last !== "N"){
                         console.log("lol",last)
                         if(last !== "n"){
+
                             console.log("lol",last)
-                            return;
+
+                            if(last !== "P"){
+                                if(last !== "p"){
+                                    return;
+                                }
+                            }
+                            
                         }
                     }
                
