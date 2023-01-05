@@ -61,73 +61,52 @@ const XTrailQ5 = () => {
         }
 
         function handleSubmit(){
-
             if(bool === false){
-                if(location.state.count === 3){
-
-                    var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
-                    var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+                if(location.state.count === 2){
+    
+                    
+                    navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                
+            }
+    
+                else{
+                    var no = Math.floor(Math.random() * (((9- location.state.count)-0) - 0 + 1)) + 0;
+                    var qn = location.state.qns;
                     var n = qn[no]
                     if (no !== -1) {
                         qn.splice(no, 1);
-
-                        console.log(no)
-                        console.log(qn)
-
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
-                    }        
+                    }
+    
+                    console.log(no)
+                    console.log(qn)
+    
+                    navigate(`/XTrailQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                }
+            }
+    
+            else{
+                if(location.state.count === 2){
+    
+                    
+                    navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
                 
             }
-
-            else{
-                var no = Math.floor(Math.random() * (((9- location.state.count)-0) - 0 + 1)) + 0;
-                var qn = location.state.qns;
-                var n = qn[no]
-                if (no !== -1) {
-                    qn.splice(no, 1);
-                }
-
-                console.log(no)
-                console.log(qn)
-
-                navigate(`/NissanGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
-            }
-            }
-
-            else{
-
-                if(location.state.count === 3){
-
-                    var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
-                    var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+    
+                else{
+                    var no = Math.floor(Math.random() * (((9- location.state.count)-0) - 0 + 1)) + 0;
+                    var qn = location.state.qns;
                     var n = qn[no]
                     if (no !== -1) {
                         qn.splice(no, 1);
-
-                        console.log(no)
-                        console.log(qn)
-
-                        navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
-                    }        
-                
-            }
-
-            else{
-                var no = Math.floor(Math.random() * (((9- location.state.count)-0) - 0 + 1)) + 0;
-                var qn = location.state.qns;
-                var n = qn[no]
-                if (no !== -1) {
-                    qn.splice(no, 1);
+                    }
+    
+                    console.log(no)
+                    console.log(qn)
+    
+                    navigate(`/XTrailQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
                 }
-
-                console.log(no)
-                console.log(qn)
-
-                navigate(`/NissanGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
+    
             }
-
-            }
-            
         }
     
     return(

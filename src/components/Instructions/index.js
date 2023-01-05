@@ -167,7 +167,7 @@ const Instructions = () => {
         }
 
         if(Loc === '7'){
-            var qn = [1,2,3,4,5,6,7,8,9,10];
+            var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
 
@@ -184,7 +184,7 @@ const Instructions = () => {
         }
 
         if(Loc === '8'){
-            var qn = [1,2,3,4,5,6,7,8,9,10];
+            var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
 
@@ -201,7 +201,7 @@ const Instructions = () => {
         }
 
         if(Loc === '9'){
-            var qn = [1,2,3,4,5,6,7,8,9,10];
+            var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
 
@@ -218,7 +218,7 @@ const Instructions = () => {
         }
 
         if(Loc === '10'){
-            var qn = [1,2,3,4,5,6,7,8,9,10];
+            var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
 
@@ -235,7 +235,7 @@ const Instructions = () => {
         }
 
         if(Loc === '11'){
-            var qn = [1,2,3,4,5,6,7,8,9,10];
+            var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
 
@@ -252,7 +252,7 @@ const Instructions = () => {
         }
 
         if(Loc === '12'){
-            var qn = [1,2,3,4,5,6,7,8,9,10];
+            var qn = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
             var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
 
