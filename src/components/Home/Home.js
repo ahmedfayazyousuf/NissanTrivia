@@ -302,6 +302,25 @@ const Home = () => {
                 buttonRef.current.disabled = true;
             }
 
+            if(Loc2 === '75297' || Loc2 === '75291'){
+                var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    
+                var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
+    
+                if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Maxima",id:id}})
+                }
+
+                buttonRef.current.disabled = true;
+            }
+
 
             // navigate(`/Instructions`,{state:{id:id,Loc:Loc2}});
         });
