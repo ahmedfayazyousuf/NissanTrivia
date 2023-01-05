@@ -144,6 +144,15 @@ import MaximaQ6 from './components/Questions/Nissan/Maxima/Q6';
 import MaximaQ7 from './components/Questions/Nissan/Maxima/Q7';
 import MaximaQ8 from './components/Questions/Nissan/Maxima/Q8';
 
+import Nismo370ZQ1 from './components/Questions/Nissan/Nismo370Z/Q1';
+import Nismo370ZQ2 from './components/Questions/Nissan/Nismo370Z/Q2';
+import Nismo370ZQ3 from './components/Questions/Nissan/Nismo370Z/Q3';
+import Nismo370ZQ4 from './components/Questions/Nissan/Nismo370Z/Q4';
+import Nismo370ZQ5 from './components/Questions/Nissan/Nismo370Z/Q5';
+import Nismo370ZQ6 from './components/Questions/Nissan/Nismo370Z/Q6';
+import Nismo370ZQ7 from './components/Questions/Nissan/Nismo370Z/Q7';
+import Nismo370ZQ8 from './components/Questions/Nissan/Nismo370Z/Q8';
+
 const App = () => {
   return (
     <>
@@ -283,6 +292,15 @@ const App = () => {
           <Route path="/MaximaQ6" element={<MaximaQ6 />} />
           <Route path="/MaximaQ7" element={<MaximaQ7 />} />
           <Route path="/MaximaQ8" element={<MaximaQ8 />} />
+
+          <Route path="/Nismo370ZQ1" element={<Nismo370ZQ1 />} />
+          <Route path="/Nismo370ZQ2" element={<Nismo370ZQ2 />} />
+          <Route path="/Nismo370ZQ3" element={<Nismo370ZQ3 />} />
+          <Route path="/Nismo370ZQ4" element={<Nismo370ZQ4 />} />
+          <Route path="/Nismo370ZQ5" element={<Nismo370ZQ5 />} />
+          <Route path="/Nismo370ZQ6" element={<Nismo370ZQ6 />} />
+          <Route path="/Nismo370ZQ7" element={<Nismo370ZQ7 />} />
+          <Route path="/Nismo370ZQ8" element={<Nismo370ZQ8 />} />
       </Routes>
     </>
   )
