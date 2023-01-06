@@ -2,11 +2,14 @@ import NissanLogo from '../Z_Images/nissanlogo.png';
 import {useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
+
 const Instructions = () => {
 
     const buttonRef = useRef(null);
     const navigate = useNavigate();
     const location = useLocation();
+
+
     function Handleclick(e){
         if(e === 'option1'){
             document.getElementById(e).style.background = "black";

@@ -3,10 +3,22 @@ import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
+import { getAuth, onAuthStateChanged,} from "firebase/auth";
+import { useEffect } from "react";
 const NissanGenericQ7 = () => {
         const location = useLocation();
         const navigate = useNavigate();
         const [bool, setBool] = useState(false); 
+        useEffect(()=>{
+            const auth = getAuth();
+            onAuthStateChanged(auth, (user) => {
+                if(!user) {
+                    navigate(`/`);                   }
+                  else{
+                    console.log(user)
+                  }
+            });
+        },[])
         function Handleclick(e){
 
             

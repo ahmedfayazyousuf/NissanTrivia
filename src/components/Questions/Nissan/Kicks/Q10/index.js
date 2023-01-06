@@ -3,10 +3,24 @@ import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
+import { getAuth, onAuthStateChanged, signOut} from "firebase/auth";
+import { useEffect } from "react";
 const KicksQ10 = () => {
         const location = useLocation();
         const navigate = useNavigate();
         const [bool, setBool] = useState(false); 
+
+        useEffect(()=>{
+            const auth = getAuth();
+            onAuthStateChanged(auth, (user) => {
+                if(!user) {
+                    navigate(`/`)                  }
+                  else{
+                    console.log(user)
+                  }
+            });
+        },[])
+
         function Handleclick(e){
 
             
@@ -65,8 +79,12 @@ const KicksQ10 = () => {
                 if(location.state.count === 2){
     
                     
-                    navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
-                
+const auth = getAuth();
+                    signOut(auth).then(() => {
+                        navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                    }).catch((error) => {
+                    // An error happened.
+                    });                    
             }
     
                 else{
@@ -88,8 +106,10 @@ const KicksQ10 = () => {
                 if(location.state.count === 2){
     
                     
-                    navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
-                
+                    const auth = getAuth();
+                    signOut(auth).then(() => {
+                        navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
+                    })                     
             }
     
                 else{

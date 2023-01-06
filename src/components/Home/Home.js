@@ -7,15 +7,19 @@ import firebase from '../../firbase';
 import {useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { getAuth, signInAnonymously } from "firebase/auth";
 
 const Home = () => { 
 
-    const buttonRef = useRef(null);
+    const buttonRef = useRef();
     const navigate = useNavigate();
     const [emailB, setEmailB] = useState(false); 
     const [codeB, setCodeB] = useState(false);   
     
     const [agree, setAgree] = useState(false)
+
+
+        
 
     function CheckData(){
 
@@ -94,6 +98,8 @@ const Home = () => {
             document.getElementById('error').innerHTML = "Please sign the form"
             return;
         }
+
+        buttonRef.current.disabled = true;
         
 
         
@@ -107,12 +113,14 @@ const Home = () => {
 
             
             if (Loc2 === '84229'){
-
-                var qn = [2,3,4,5,6];
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
+                    var qn = [2,3,4,5,6];
     
-                var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+                    var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
     
-                if (no !== -1) {
+                    if (no !== -1) {
                     // qn.splice(no, 1);
     
                     console.log(no);
@@ -122,10 +130,16 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Q50",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                    
+                
+                // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '84232'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -141,10 +155,14 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Q60",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '70913' || Loc2 === '84922' || Loc2 === '80592' || Loc2 === '39512' || Loc2 === '17834'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -160,10 +178,14 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX50",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '18026' || Loc2 === '16798'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -179,10 +201,14 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX55",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '488451' || Loc2 === '84819' || Loc2 === '79419'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -198,10 +224,14 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX60",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '20164' || Loc2 === '81037'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -217,10 +247,15 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX80",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if(Loc2 === '92079' || Loc2 === '75321' || Loc2 === '75319' ){
+
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -235,10 +270,14 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Altima",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if(Loc2 === '57721' || Loc2 === '27802' || Loc2 === '74529'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -253,10 +292,14 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Patrol",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if(Loc2 === '61170'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -271,10 +314,15 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Pathfinder",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if(Loc2 === '96430'){
+
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -289,10 +337,15 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Kicks",id:id}})
                 }
-                buttonRef.current.disabled = true;
+
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if(Loc2 === '97035'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -307,10 +360,14 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"NissanZ",id:id}})
                 }
-                buttonRef.current.disabled = true;
+            })
+                // buttonRef.current.disabled = true;
             }
     
             if(Loc2 === '74925'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -325,11 +382,15 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"XTrail",id:id}})
                 }
+            })
 
-                buttonRef.current.disabled = true;
+                // buttonRef.current.disabled = true;
             }
 
             if(Loc2 === '75297' || Loc2 === '75291'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -344,11 +405,15 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Maxima",id:id}})
                 }
+            })
 
-                buttonRef.current.disabled = true;
+                // buttonRef.current.disabled = true;
             }
 
             if(Loc2 === '84418'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -363,8 +428,9 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Nismo370Z",id:id}})
                 }
+            })
 
-                buttonRef.current.disabled = true;
+                // buttonRef.current.disabled = true;
             }
 
 
