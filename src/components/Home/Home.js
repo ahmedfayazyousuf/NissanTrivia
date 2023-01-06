@@ -182,7 +182,7 @@ const Home = () => {
                 buttonRef.current.disabled = true;
             }
     
-            if (Loc2 === '488451' || Loc2 === '84819'){
+            if (Loc2 === '488451' || Loc2 === '84819' || Loc2 === '79419'){
     
                 var qn = [2,3,4,5,6];
     
