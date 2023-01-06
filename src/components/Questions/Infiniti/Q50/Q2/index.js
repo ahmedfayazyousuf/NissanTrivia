@@ -142,11 +142,11 @@ return(
         </div>
 
         <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
-                <div className="slotdiv" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '70%', overflowX:'hidden'}} id='slotparent'>
-                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.0L V6 Twin-Turbo</button>
-                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.0L VC-Turbo</button>
-                    <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>3.0L V6 Twin-Turbo</button>
-                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"260px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>3.5L VC-Turbo</button>
+                <div className="slotdiv" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '90%', overflowX:'hidden'}} id='slotparent'>
+                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"280px", margin: '5px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.0L V6 Twin-Turbo</button>
+                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"280px", margin: '5px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.0L VC-Turbo</button>
+                    <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"280px", margin: '5px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>3.0L V6 Twin-Turbo</button>
+                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"280px", margin: '5px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>3.5L VC-Turbo</button>
                 </div>
 
             <button className="grab" style={{width:"220px", marginTop: '10px', marginBottom: '10px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
