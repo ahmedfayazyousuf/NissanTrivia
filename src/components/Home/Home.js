@@ -251,6 +251,9 @@ const Home = () => {
             }
     
             if(Loc2 === '57721' || Loc2 === '27802' || Loc2 === '74529'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -265,10 +268,14 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Patrol",id:id}})
                 }
+            })
                 // buttonRef.current.disabled = true;
             }
     
             if(Loc2 === '61170'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -283,6 +290,7 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Pathfinder",id:id}})
                 }
+            })
                 // buttonRef.current.disabled = true;
             }
     
@@ -307,10 +315,13 @@ const Home = () => {
                 }
 
             })
-                buttonRef.current.disabled = true;
+                // buttonRef.current.disabled = true;
             }
     
             if(Loc2 === '97035'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -325,10 +336,14 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"NissanZ",id:id}})
                 }
+            })
                 // buttonRef.current.disabled = true;
             }
     
             if(Loc2 === '74925'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -343,11 +358,15 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"XTrail",id:id}})
                 }
+            })
 
                 // buttonRef.current.disabled = true;
             }
 
             if(Loc2 === '75297' || Loc2 === '75291'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -362,11 +381,15 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Maxima",id:id}})
                 }
+            })
 
                 // buttonRef.current.disabled = true;
             }
 
             if(Loc2 === '84418'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -381,6 +404,7 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Nismo370Z",id:id}})
                 }
+            })
 
                 buttonRef.current.disabled = true;
             }
