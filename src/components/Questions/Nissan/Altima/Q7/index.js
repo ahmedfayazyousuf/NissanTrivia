@@ -127,7 +127,7 @@ const AltimaQ7 = () => {
 
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}}>
                     <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Red</button>
-                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Grey</button>
+                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Yellow</button>
                 </div>
 
                 <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>

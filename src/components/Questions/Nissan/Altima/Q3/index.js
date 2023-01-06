@@ -120,14 +120,14 @@ const AltimaQ3 = () => {
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
-                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.4L or 2.5L </button>
-                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.5 L or 3.5 V6</button>
+                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '85%'}} id='slotparent'>
+                    <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"150px", height:'50px', margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '5px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.4L or 2.5L </button>
+                    <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"150px", height:'50px', margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '5px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.5 L or 3.5 V6</button>
                 </div>
 
-                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}}>
-                    <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>3.0L V6 Twin Turbo or 3.6 inline 6</button>
-                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"150px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.0L V-CT or 2.5L</button>
+                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '85%'}}>
+                    <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"150px", height:'50px', margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '5px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>3.0L V6 Twin Turbo or 3.6 inline 6</button>
+                    <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"150px", height:'50px', margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '5px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>2.0L V-CT or 2.5L</button>
                 </div>
 
                 <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
