@@ -116,7 +116,7 @@ const PathfinderQ9 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '14px', paddingRight: '14px'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}}>What features does Pathfinder introduce for the 1st time within Nissan line up in the region </p>
+                <p style={{fontSize: '15px', marginTop: '10px'}}>What features does Pathfinder introduce for the 1st time within Nissan line up in the region?</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', overflowX:'hidden'}}>

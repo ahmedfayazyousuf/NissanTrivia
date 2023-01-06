@@ -116,7 +116,7 @@ const PathfinderQ8 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}}>How many beverage holders are in the cabin?</p>
+                <p style={{fontSize: '15px', marginTop: '10px'}}>How many beverage holders are in the cabin of Pathfinder?</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>

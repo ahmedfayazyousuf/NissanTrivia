@@ -116,7 +116,7 @@ const PatrolQ9 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}}>What is the size of the main screen </p>
+                <p style={{fontSize: '15px', marginTop: '10px'}}>What is the size of the main screen in Patrol</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
