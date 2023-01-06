@@ -3,10 +3,23 @@ import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
+import { getAuth, onAuthStateChanged, signOut} from "firebase/auth";
+import { useEffect } from "react";
 const PathfinderQ4 = () => {
         const location = useLocation();
         const navigate = useNavigate();
         const [bool, setBool] = useState(false); 
+        useEffect(()=>{
+            const auth = getAuth();
+            onAuthStateChanged(auth, (user) => {
+                if(!user) {
+                    navigate(`/`); //If User is not logged in, redirect to login page
+                  } 
+                  else{
+                    console.log(user)
+                  }
+            });
+        },[])
         function Handleclick(e){
 
             
@@ -61,73 +74,62 @@ const PathfinderQ4 = () => {
         }
 
         function handleSubmit(){
+            if(bool === false){
+                if(location.state.count === 2){
 
-            // if(bool === false){
-            //     if(location.state.count === 3){
-
-            //         var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
-            //         var qn = [1,2,3,4];
-            //         var n = qn[no]
-            //         if (no !== -1) {
-            //             qn.splice(no, 1);
-
-            //             console.log(no)
-            //             console.log(qn)
-
-            //             navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
-            //         }        
+                    const auth = getAuth();
+                    signOut(auth).then(() => {
+                        navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                    }).catch((error) => {
+                    // An error happened.
+                    });
+    
+                    
+                    
                 
-            // }
-
-            // else{
-            //     var no = Math.floor(Math.random() * (((5- location.state.count)-0) - 0 + 1)) + 0;
-            //     var qn = location.state.qns;
-            //     var n = qn[no]
-            //     if (no !== -1) {
-            //         qn.splice(no, 1);
-            //     }
-
-            //     console.log(no)
-            //     console.log(qn)
-
-            //     navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id}})
-            // }
-            // }
-
-            // else{
-
-            //     if(location.state.count === 3){
-
-            //         var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
-            //         var qn = [1,2,3,4];
-            //         var n = qn[no]
-            //         if (no !== -1) {
-            //             qn.splice(no, 1);
-
-            //             console.log(no)
-            //             console.log(qn)
-
-            //             navigate(`/${location.state.car}Q${n}`,{state:{count:1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
-            //         }        
+            }
+    
+                else{
+                    var no = Math.floor(Math.random() * (((9- location.state.count)-0) - 0 + 1)) + 0;
+                    var qn = location.state.qns;
+                    var n = qn[no]
+                    if (no !== -1) {
+                        qn.splice(no, 1);
+                    }
+    
+                    console.log(no)
+                    console.log(qn)
+    
+                    navigate(`/PathfinderQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                }
+            }
+    
+            else{
+                if(location.state.count === 2){
+    
+                    const auth = getAuth();
+                    signOut(auth).then(() => {
+                        navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
+                    })
+                    
                 
-            // }
-
-            // else{
-            //     var no = Math.floor(Math.random() * (((5- location.state.count)-0) - 0 + 1)) + 0;
-            //     var qn = location.state.qns;
-            //     var n = qn[no]
-            //     if (no !== -1) {
-            //         qn.splice(no, 1);
-            //     }
-
-            //     console.log(no)
-            //     console.log(qn)
-
-            //     navigate(`/InfinitiGenericQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id}})
-            // }
-
-            // }
-            
+            }
+    
+                else{
+                    var no = Math.floor(Math.random() * (((9- location.state.count)-0) - 0 + 1)) + 0;
+                    var qn = location.state.qns;
+                    var n = qn[no]
+                    if (no !== -1) {
+                        qn.splice(no, 1);
+                    }
+    
+                    console.log(no)
+                    console.log(qn)
+    
+                    navigate(`/PathfinderQ${n}`,{state:{count:location.state.count + 1,qns:qn,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
+                }
+    
+            }
         }
     
     return(
