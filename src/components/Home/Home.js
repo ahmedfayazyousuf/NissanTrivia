@@ -7,6 +7,7 @@ import firebase from '../../firbase';
 import {useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { getAuth, signInAnonymously } from "firebase/auth";
 
 const Home = () => { 
 
@@ -16,6 +17,9 @@ const Home = () => {
     const [codeB, setCodeB] = useState(false);   
     
     const [agree, setAgree] = useState(false)
+
+
+        
 
     function CheckData(){
 
@@ -108,11 +112,14 @@ const Home = () => {
             
             if (Loc2 === '84229'){
 
-                var qn = [2,3,4,5,6];
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
+                    var qn = [2,3,4,5,6];
     
-                var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+                    var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
     
-                if (no !== -1) {
+                    if (no !== -1) {
                     // qn.splice(no, 1);
     
                     console.log(no);
@@ -122,6 +129,15 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Q50",id:id}})
                 }
+                    // Signed in..
+                  })
+                  .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // ...
+                  });
+
+                
                 buttonRef.current.disabled = true;
             }
     
@@ -221,6 +237,10 @@ const Home = () => {
             }
     
             if(Loc2 === '92079' || Loc2 === '75321' || Loc2 === '75319' ){
+
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -235,6 +255,7 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Altima",id:id}})
                 }
+            })
                 buttonRef.current.disabled = true;
             }
     
@@ -275,6 +296,10 @@ const Home = () => {
             }
     
             if(Loc2 === '96430'){
+
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                 var qn = [2,3,4,5,6,7,8,9,10,11,12,13,14,15];
     
                 var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
@@ -289,6 +314,8 @@ const Home = () => {
                     
                     navigate(`/NissanGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Kicks",id:id}})
                 }
+
+            })
                 buttonRef.current.disabled = true;
             }
     

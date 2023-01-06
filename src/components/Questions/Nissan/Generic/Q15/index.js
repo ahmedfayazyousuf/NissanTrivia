@@ -3,10 +3,23 @@ import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
+import { getAuth, onAuthStateChanged,} from "firebase/auth";
+import { useEffect } from "react";
 const NissanGenericQ15 = () => {
         const location = useLocation();
         const navigate = useNavigate();
         const [bool, setBool] = useState(false); 
+        useEffect(()=>{
+            const auth = getAuth();
+            onAuthStateChanged(auth, (user) => {
+                if(!user) {
+                    navigate(`/`);                   }
+                  else{
+                    console.log(user)
+                  }
+            });
+        },[])
+
         function Handleclick(e){
 
             
@@ -34,6 +47,7 @@ const NissanGenericQ15 = () => {
 
             if(bool === false){
                 if(location.state.count === 3){
+                    
 
                     var no = Math.floor(Math.random() * ((9-0) - 0 + 1)) + 0;
                     var qn = [1,2,3,4,5,6,7,8,9,10];

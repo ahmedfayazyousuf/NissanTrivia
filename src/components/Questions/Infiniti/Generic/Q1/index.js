@@ -3,6 +3,8 @@ import { useState } from "react"
 import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+
 const InfinitiGenericQ1 = () => {
         const location = useLocation();
         const navigate = useNavigate();
@@ -64,6 +66,8 @@ const InfinitiGenericQ1 = () => {
 
 
         function handleSubmit(){
+
+
 
             var time = new Date();
 
