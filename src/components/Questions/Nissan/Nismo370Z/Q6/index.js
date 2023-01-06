@@ -116,7 +116,7 @@ const Nismo370ZQ6 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}} >What is the alloy wheel size of the Top grade?</p>
+                <p style={{fontSize: '15px', marginTop: '10px'}} >What is the alloy wheel size of the Top grade Nismo 370 Z?</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>

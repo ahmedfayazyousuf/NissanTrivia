@@ -7,7 +7,7 @@ const Q50Q2 = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [bool, setBool] = useState(false); 
-    var time = location.state.time;
+  
     function Handleclick(e){
         if(e === 'option1'){
             document.getElementById(e).style.background = "black";

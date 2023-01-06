@@ -137,7 +137,7 @@ const AltimaQ5 = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', paddingLeft: '30px', paddingRight: '30px'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}}>What's the transmission of the Vehicle</p>
+                <p style={{fontSize: '15px', marginTop: '10px'}}>What's the transmission of the Altima</p>
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
