@@ -3,11 +3,23 @@ import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 import { useState } from "react"
-
+import { getAuth, onAuthStateChanged, signOut} from "firebase/auth";
+import { useEffect } from "react";
 const QX55Q1 = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [bool, setBool] = useState(false); 
+    useEffect(()=>{
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+            if(!user) {
+                navigate(`/`); //If User is not logged in, redirect to login page
+              }
+              else{
+                console.log(user)
+              }
+        });
+    },[])
     
         function Handleclick(e){
             if(e === 'option1'){
@@ -63,19 +75,15 @@ const QX55Q1 = () => {
         if(bool === false){
             if(location.state.count === 2){
 
-                // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
-                // var qn = [1,2,3,4];
+                const auth = getAuth();
+                signOut(auth).then(() => {
+                    navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                }).catch((error) => {
+                // An error happened.
+                });
 
-                // if (no !== -1) {
-                //     qn.splice(no, 1);
-
-                //     console.log(no)
-                //     console.log(qn)
-
-                //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
-                // }    
                 
-                navigate(`/Score`,{state:{count:1,score:location.state.score,car:location.state.car,id:location.state.id,time:location.state.time}})
+                
             
         }
 
@@ -97,19 +105,11 @@ const QX55Q1 = () => {
         else{
             if(location.state.count === 2){
 
-                // var no = Math.floor(Math.random() * ((3-0) - 0 + 1)) + 0;
-                // var qn = [1,2,3,4];
-
-                // if (no !== -1) {
-                //     qn.splice(no, 1);
-
-                //     console.log(no)
-                //     console.log(qn)
-
-                //     navigate(`/`,{state:{count:1,qns:qn,score:0,car:location.state.car}})
-                // }    
+                const auth = getAuth();
+                signOut(auth).then(() => {
+                    navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
+                })
                 
-                navigate(`/Score`,{state:{count:1,score:location.state.score+1,car:location.state.car,id:location.state.id,time:location.state.time}})
             
         }
 
