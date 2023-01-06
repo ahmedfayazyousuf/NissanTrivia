@@ -4,11 +4,25 @@ import '../../../../Z_Styles/Nissan.css'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 import { useEffect } from "react";
+import { getAuth, onAuthStateChanged,} from "firebase/auth";
 const GenericQ5 = () => {
     const [bool, setBool] = useState(false); 
     const location = useLocation();
     const navigate = useNavigate();
     var time = location.state.time;
+
+    useEffect(()=>{
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+            if(!user) {
+                navigate(`/`);                   }
+              else{
+                console.log(user)
+              }
+        });
+    },[])
+
+    
         function Handleclick(e){
             if(e === 'option1'){
                 document.getElementById(e).style.background = "black";
