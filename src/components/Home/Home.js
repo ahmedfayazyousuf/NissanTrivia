@@ -113,6 +113,9 @@ const Home = () => {
 
             
             if (Loc2 === '84229'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
                     var qn = [2,3,4,5,6];
     
                     var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
@@ -127,12 +130,16 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Q50",id:id}})
                 }
+            })
                     
                 
                 // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '84232'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -148,10 +155,14 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Q60",id:id}})
                 }
+            })
                 // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '70913' || Loc2 === '84922' || Loc2 === '80592' || Loc2 === '39512' || Loc2 === '17834'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -167,10 +178,14 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX50",id:id}})
                 }
+            })
                 // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '18026' || Loc2 === '16798'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -186,10 +201,14 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX55",id:id}})
                 }
+            })
                 // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '488451' || Loc2 === '84819' || Loc2 === '79419'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -205,10 +224,14 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX60",id:id}})
                 }
+            })
                 // buttonRef.current.disabled = true;
             }
     
             if (Loc2 === '20164' || Loc2 === '81037'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
     
                 var qn = [2,3,4,5,6];
     
@@ -224,6 +247,7 @@ const Home = () => {
                     
                     navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"QX80",id:id}})
                 }
+            })
                 // buttonRef.current.disabled = true;
             }
     
@@ -406,7 +430,7 @@ const Home = () => {
                 }
             })
 
-                buttonRef.current.disabled = true;
+                // buttonRef.current.disabled = true;
             }
 
 
