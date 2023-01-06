@@ -139,13 +139,13 @@ return(
 
         <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
             <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '80%'}} id='slotparent'>
-                <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"170px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Semi-Aniline Leather</button>
-                <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"170px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Suede</button>
+                <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"170px", height: '60px', margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Semi-Aniline Leather</button>
+                <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"170px", height: '60px', margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Suede</button>
             </div>
 
             <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '80%'}}>
-                <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"170px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Leatherette</button>
-                <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"170px", margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Pleather</button>
+                <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"170px", height: '60px', margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Leatherette</button>
+                <button className="grab" id="option4" onClick={() => {Handleclick("option4")}} value="option4" style={{width:"170px", height: '60px', margin: '10px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Pleather</button>
             </div>
 
             <button className="grab" style={{width:"220px", marginTop: '40px', marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={handleSubmit}>NEXT</button>
