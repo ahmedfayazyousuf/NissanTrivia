@@ -518,13 +518,14 @@ const Home = () => {
                             <input type="loccode" id="loccode" placeholder='ENTER LOCATION CODE (ENTERED BY MARSHAL)' style={{width:"280px", height: '30px', textAlign: 'center', fontSize: '10px'}} /> 
                             <p id='error' style= {{ fontSize: "10px", color:"red"}}></p>
                         </div>
+                        <div className="form-check" id="checkthreewrap" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+                            <input className="form-check-input" id="checkthree" type="checkbox" value="" style={{backgroundColor: '#061A1B', borderColor: 'white', Size: '8px'}} onChange={handleChange} required/>
+                            <label className="form-check-label" style={{fontSize: '8px', color:'white'}}>Signed the Disclaimer Forms.</label>
+                        </div>
                         <button ref={buttonRef} className="grab" style={{width:"200px", height: '35px', marginTop: '20px', margin: '10px', borderRadius: '10px', backgroundColor: 'white'}} onClick={CheckData}>LET'S PLAY</button>
                 </div>
 
-                <div className="form-check" id="checkthreewrap" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: '10px'}}>
-                    <input className="form-check-input" id="checkthree" type="checkbox" value="" style={{backgroundColor: '#061A1B', borderColor: 'white', Size: '8px'}} onChange={handleChange} required/>
-                    <label className="form-check-label" style={{fontSize: '8px', color:'white'}}>Signed the Disclaimer Forms.</label>
-                </div>
+                
 
                 <div>
                     <img id='head' style={{width: '150px', marginTop: '45px', marginBottom: '80px'}} src={GetReady} alt="How Well"/>
