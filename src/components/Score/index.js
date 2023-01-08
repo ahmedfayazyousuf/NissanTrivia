@@ -43,12 +43,12 @@ const Score = () => {
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '300px',paddingLeft: '0px', paddingTop: '40px', paddingBottom: '40px', border: '2px solid black', borderRadius: '15px'}}>
 
                     <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center'}} id='slotparent'>
-                        <p>CORRECT ANSWERS</p>
+                        <p>CORRECT</p>
                         <p class="sss" style={{marginLeft: '15px'}}>{location.state.score}</p>
                     </div>
 
                     <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center'}} id='slotparent'>
-                        <p>WRONG ANSWERS</p>
+                        <p>INCORRECT</p>
                         <p class="sss" style={{marginLeft: '15px'}}>{5-location.state.score}</p>
                     </div>
                 </div>
