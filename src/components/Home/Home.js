@@ -509,7 +509,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                    <img id='head' style={{width: '300px', marginTop: '18px', marginBottom: '100px'}} src={HowWell} alt="How Well"/>
+                    <img id='head' style={{width: '300px', marginTop: '18px', marginBottom: '130px'}} src={HowWell} alt="How Well"/>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '350px', gap:'10px', alignItems: 'center'}}>
