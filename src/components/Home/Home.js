@@ -205,7 +205,7 @@ const Home = () => {
                 // buttonRef.current.disabled = true;
             }
     
-            if (Loc2 === '488451' || Loc2 === '84819' || Loc2 === '79419'){
+            if (Loc2 === '71842' || Loc2 === '84819' || Loc2 === '79419'){
                 const auth = getAuth();
                 signInAnonymously(auth)
                   .then(() => {
