@@ -140,7 +140,7 @@ const NissanGenericQ1 = () => {
             </div>
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '5px', overflowX: 'hidden'}}>
-                <div className="slotdiv" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '70%', overflowX: 'hidden'}} id='slotparent'>
+                <div className="slotdiv" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', overflowX: 'hidden'}} id='slotparent'>
                     <button className="grab" id="option1" onClick={() => {Handleclick("option1")}} value="option1" style={{width:"260px", margin: '7px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Intelligent Driving, Intelligent Power, Intelligent Integration</button>
                     <button className="grab" id="option2" onClick={() => {Handleclick("option2")}} value="option2" style={{width:"260px", margin: '7px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Intelligent Distance, Intelligent Power, Intelligent Interaction</button>
                     <button className="grab" id="option3" onClick={() => {Handleclick("option3")}} value="option3" style={{width:"260px", margin: '7px', border:'1px solid black', borderRadius: '20px', padding: '10px', color: 'black', backgroundColor: 'transparent', cursor: 'grab'}}>Intelligent Driving, Intelligent Program, Intelligent Interaction</button>
