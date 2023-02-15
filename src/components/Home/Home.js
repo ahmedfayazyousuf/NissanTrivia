@@ -107,6 +107,27 @@ const Home = () => {
         CarUsers.add({Email:Email, Code:Loc}).then((doc)=>{
             var id = doc.id;
             var time = new Date();
+
+            if (Loc2 === '00000'){
+                const auth = getAuth();
+                signInAnonymously(auth)
+                  .then(() => {
+                    var qn = [2,3,4,5,6];
+    
+                    var no = Math.floor(Math.random() * ((5-0) - 0 + 1)) + 0;
+    
+                    if (no !== -1) {
+                    // qn.splice(no, 1);
+    
+                    console.log(no);
+    
+                    console.log(qn);
+    
+                    
+                    navigate(`/InfinitiGenericQ${1}`,{state:{count:1,qns:qn,score:0,car:"Q50",id:id}})
+                }
+            })
+            }
             
 
 
